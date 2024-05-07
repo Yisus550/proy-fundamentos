@@ -1,6 +1,6 @@
 ﻿namespace borrador
 {
-    partial class frm_login
+    partial class Login
     {
         /// <summary>
         /// Required designer variable.
@@ -31,10 +31,8 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblusuario = new System.Windows.Forms.Label();
             this.lblcontraseña = new System.Windows.Forms.Label();
-            this.lblhora = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.btningresar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -70,17 +68,6 @@
             this.lblcontraseña.TabIndex = 2;
             this.lblcontraseña.Text = "Contraseña";
             // 
-            // lblhora
-            // 
-            this.lblhora.AutoSize = true;
-            this.lblhora.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblhora.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(134)))), ((int)(((byte)(138)))));
-            this.lblhora.Location = new System.Drawing.Point(83, 413);
-            this.lblhora.Name = "lblhora";
-            this.lblhora.Size = new System.Drawing.Size(175, 29);
-            this.lblhora.TabIndex = 3;
-            this.lblhora.Text = "Hora de entrada";
-            // 
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(87, 295);
@@ -94,17 +81,6 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(265, 22);
             this.textBox2.TabIndex = 5;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.CalendarForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(134)))), ((int)(((byte)(138)))));
-            this.dateTimePicker1.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(134)))), ((int)(((byte)(138)))));
-            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft YaHei", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dateTimePicker1.Location = new System.Drawing.Point(91, 446);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(117, 25);
-            this.dateTimePicker1.TabIndex = 6;
             // 
             // btningresar
             // 
@@ -126,10 +102,8 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(248)))), ((int)(((byte)(247)))));
             this.ClientSize = new System.Drawing.Size(423, 633);
             this.Controls.Add(this.btningresar);
-            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.lblhora);
             this.Controls.Add(this.lblcontraseña);
             this.Controls.Add(this.lblusuario);
             this.Controls.Add(this.pictureBox1);
@@ -146,10 +120,8 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblusuario;
         private System.Windows.Forms.Label lblcontraseña;
-        private System.Windows.Forms.Label lblhora;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Button btningresar;
     }
 }
