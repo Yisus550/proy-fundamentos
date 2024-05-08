@@ -123,6 +123,26 @@ namespace borrador.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_citas_47 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-citas-47", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_cono_de_perro_47 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-cono-de-perro-47", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Imagen_de_WhatsApp_2024_04_23_a_las_21_19_08_5d11ca77 {
             get {
                 object obj = ResourceManager.GetObject("Imagen de WhatsApp 2024-04-23 a las 21.19.08_5d11ca77", resourceCulture);

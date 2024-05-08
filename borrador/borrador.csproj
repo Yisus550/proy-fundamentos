@@ -58,6 +58,12 @@
     <Compile Include="frm_login.Designer.cs">
       <DependentUpon>frm_login.cs</DependentUpon>
     </Compile>
+    <Compile Include="HistorialClinico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HistorialClinico.Designer.cs">
+      <DependentUpon>HistorialClinico.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frm_registro_mascotas.resx">
@@ -65,6 +71,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_login.resx">
       <DependentUpon>frm_login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HistorialClinico.resx">
+      <DependentUpon>HistorialClinico.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -118,6 +127,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Imagen de WhatsApp 2024-04-23 a las 21.19.08_5d11ca77.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-cono-de-perro-47.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-citas-47.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
