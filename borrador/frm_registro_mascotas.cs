@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace borrador
 {
-    public partial class RegistroMascotas : Form
+    public partial class frm_registro_mascotas : Form
     {
-        public RegistroMascotas()
+        public frm_registro_mascotas()
         {
             InitializeComponent();
         }

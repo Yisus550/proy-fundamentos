@@ -1,6 +1,6 @@
 ﻿namespace borrador
 {
-    partial class RegistroMascotas
+    partial class frm_registro_mascotas
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegistroMascotas));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_registro_mascotas));
             this.nombreveterinaria1 = new System.Windows.Forms.TextBox();
             this.txtregistro = new System.Windows.Forms.TextBox();
             this.txtmascotas = new System.Windows.Forms.TextBox();

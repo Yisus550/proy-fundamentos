@@ -10,16 +10,16 @@ using System.Windows.Forms;
 
 namespace borrador
 {
-    public partial class Login : Form
+    public partial class frm_login : Form
     {
-        public Login()
+        public frm_login()
         {
             InitializeComponent();
         }
 
         private void btningresar_Click(object sender, EventArgs e)
         {
-            new RegistroMascotas().Show();
+            new frm_registro_mascotas().Show();
             this.Hide();
         }
     }
