@@ -58,11 +58,11 @@
     <Compile Include="frm_login.Designer.cs">
       <DependentUpon>frm_login.cs</DependentUpon>
     </Compile>
-    <Compile Include="HistorialClinico.cs">
+    <Compile Include="frm_historial_clinico.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="HistorialClinico.Designer.cs">
-      <DependentUpon>HistorialClinico.cs</DependentUpon>
+    <Compile Include="frm_historial_clinico.Designer.cs">
+      <DependentUpon>frm_historial_clinico.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -72,8 +72,8 @@
     <EmbeddedResource Include="frm_login.resx">
       <DependentUpon>frm_login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="HistorialClinico.resx">
-      <DependentUpon>HistorialClinico.cs</DependentUpon>
+    <EmbeddedResource Include="frm_historial_clinico.resx">
+      <DependentUpon>frm_historial_clinico.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

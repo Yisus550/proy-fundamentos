@@ -1,6 +1,6 @@
 ﻿namespace borrador
 {
-    partial class HistorialClinico
+    partial class frm_historial_clinico
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HistorialClinico));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_historial_clinico));
             this.txtotro = new System.Windows.Forms.TextBox();
             this.txtedad = new System.Windows.Forms.TextBox();
             this.txtcolor = new System.Windows.Forms.TextBox();

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace borrador
 {
-    public partial class HistorialClinico : Form
+    public partial class frm_historial_clinico : Form
     {
-        public HistorialClinico()
+        public frm_historial_clinico()
         {
             InitializeComponent();
         }
