@@ -38,5 +38,17 @@ namespace borrador
         {
             openChildForm(new frm_registro_mascotas());
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            panelMenu.Visible = false;
+            panelMenu2.Visible = true;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            panelMenu.Visible = true;
+            panelMenu2.Visible = false;
+        }
     }
 }

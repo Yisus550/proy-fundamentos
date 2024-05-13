@@ -400,7 +400,7 @@
             this.apellido.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.apellido.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.apellido.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(158)))), ((int)(((byte)(162)))));
-            this.apellido.Location = new System.Drawing.Point(543, 243);
+            this.apellido.Location = new System.Drawing.Point(502, 243);
             this.apellido.Name = "apellido";
             this.apellido.Size = new System.Drawing.Size(81, 24);
             this.apellido.TabIndex = 36;
@@ -409,7 +409,7 @@
             // txtapellido
             // 
             this.txtapellido.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(248)))), ((int)(((byte)(247)))));
-            this.txtapellido.Location = new System.Drawing.Point(630, 243);
+            this.txtapellido.Location = new System.Drawing.Point(589, 243);
             this.txtapellido.Name = "txtapellido";
             this.txtapellido.Size = new System.Drawing.Size(241, 22);
             this.txtapellido.TabIndex = 37;
@@ -440,7 +440,7 @@
             this.telefono.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.telefono.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.telefono.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(158)))), ((int)(((byte)(162)))));
-            this.telefono.Location = new System.Drawing.Point(543, 298);
+            this.telefono.Location = new System.Drawing.Point(502, 298);
             this.telefono.Name = "telefono";
             this.telefono.Size = new System.Drawing.Size(81, 24);
             this.telefono.TabIndex = 40;
@@ -449,7 +449,7 @@
             // txtTelefono
             // 
             this.txtTelefono.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(248)))), ((int)(((byte)(247)))));
-            this.txtTelefono.Location = new System.Drawing.Point(630, 298);
+            this.txtTelefono.Location = new System.Drawing.Point(589, 298);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(241, 22);
             this.txtTelefono.TabIndex = 41;
@@ -501,7 +501,7 @@
             // pictureBox8
             // 
             this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
-            this.pictureBox8.Location = new System.Drawing.Point(887, 243);
+            this.pictureBox8.Location = new System.Drawing.Point(846, 243);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(122, 107);
             this.pictureBox8.TabIndex = 50;
@@ -510,7 +510,7 @@
             // pictureBox7
             // 
             this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(1015, 201);
+            this.pictureBox7.Location = new System.Drawing.Point(974, 201);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(122, 107);
             this.pictureBox7.TabIndex = 49;
@@ -519,7 +519,7 @@
             // pictureBox5
             // 
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(1015, 336);
+            this.pictureBox5.Location = new System.Drawing.Point(974, 336);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(122, 107);
             this.pictureBox5.TabIndex = 44;
@@ -546,7 +546,7 @@
             // animales
             // 
             this.animales.Image = ((System.Drawing.Image)(resources.GetObject("animales.Image")));
-            this.animales.Location = new System.Drawing.Point(793, 12);
+            this.animales.Location = new System.Drawing.Point(752, 12);
             this.animales.Name = "animales";
             this.animales.Size = new System.Drawing.Size(355, 188);
             this.animales.TabIndex = 1;
