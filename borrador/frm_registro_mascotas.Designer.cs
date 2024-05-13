@@ -561,10 +561,9 @@
             this.logotipo.TabIndex = 0;
             this.logotipo.TabStop = false;
             // 
-            // RegistroMascotas
+            // frm_registro_mascotas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(248)))), ((int)(((byte)(247)))));
             this.ClientSize = new System.Drawing.Size(1149, 751);
             this.Controls.Add(this.btnhistorial);
@@ -612,7 +611,7 @@
             this.Controls.Add(this.nombreveterinaria1);
             this.Controls.Add(this.animales);
             this.Controls.Add(this.logotipo);
-            this.Name = "RegistroMascotas";
+            this.Name = "frm_registro_mascotas";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
