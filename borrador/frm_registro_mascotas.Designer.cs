@@ -497,6 +497,7 @@
             this.btnhistorial.TabIndex = 54;
             this.btnhistorial.Text = "Ver historial clinico";
             this.btnhistorial.UseVisualStyleBackColor = true;
+            this.btnhistorial.Click += new System.EventHandler(this.btnhistorial_Click);
             // 
             // pictureBox8
             // 

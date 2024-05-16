@@ -10,17 +10,11 @@ using System.Windows.Forms;
 
 namespace borrador
 {
-    public partial class RegistroMascotas : Form
+    public partial class frm_registro_citas : Form
     {
-        public RegistroMascotas()
+        public frm_registro_citas()
         {
             InitializeComponent();
-        }
-
-        private void btnhistorial_Click(object sender, EventArgs e)
-        {
-            new frm_historial_clinico().ShowDialog();
-            this.Hide();
         }
     }
 }

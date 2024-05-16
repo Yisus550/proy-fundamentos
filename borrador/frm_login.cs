@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace borrador
 {
-    public partial class Login : Form
+    public partial class frm_login : Form
     {
-        public Login()
+        public frm_login()
         {
             InitializeComponent();
         }
