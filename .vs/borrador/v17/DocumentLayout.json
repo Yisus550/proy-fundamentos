@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\elarv\\OneDrive\\Documentos\\proy-fundamentos\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A7E7DA7D-36A2-48E6-ACBB-FD73A5C70F03}|borrador\\veterinaria.csproj|c:\\users\\elarv\\onedrive\\documentos\\proy-fundamentos\\borrador\\frm_principal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{A7E7DA7D-36A2-48E6-ACBB-FD73A5C70F03}|borrador\\veterinaria.csproj|solutionrelative:borrador\\frm_principal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A7E7DA7D-36A2-48E6-ACBB-FD73A5C70F03}|borrador\\veterinaria.csproj|C:\\Users\\elarv\\OneDrive\\Documentos\\proy-fundamentos\\borrador\\frm_principal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A7E7DA7D-36A2-48E6-ACBB-FD73A5C70F03}|borrador\\veterinaria.csproj|c:\\users\\elarv\\onedrive\\documentos\\proy-fundamentos\\borrador\\frm_principal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A7E7DA7D-36A2-48E6-ACBB-FD73A5C70F03}|borrador\\veterinaria.csproj|solutionrelative:borrador\\frm_principal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A7E7DA7D-36A2-48E6-ACBB-FD73A5C70F03}|borrador\\veterinaria.csproj|C:\\Users\\elarv\\OneDrive\\Documentos\\proy-fundamentos\\borrador\\frm_registro_mascotas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{A7E7DA7D-36A2-48E6-ACBB-FD73A5C70F03}|borrador\\veterinaria.csproj|solutionrelative:borrador\\frm_registro_mascotas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{A7E7DA7D-36A2-48E6-ACBB-FD73A5C70F03}|borrador\\veterinaria.csproj|c:\\users\\elarv\\onedrive\\documentos\\proy-fundamentos\\borrador\\frm_login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7E7DA7D-36A2-48E6-ACBB-FD73A5C70F03}|borrador\\veterinaria.csproj|solutionrelative:borrador\\frm_login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A7E7DA7D-36A2-48E6-ACBB-FD73A5C70F03}|borrador\\veterinaria.csproj|C:\\Users\\elarv\\OneDrive\\Documentos\\proy-fundamentos\\borrador\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A7E7DA7D-36A2-48E6-ACBB-FD73A5C70F03}|borrador\\veterinaria.csproj|solutionrelative:borrador\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A7E7DA7D-36A2-48E6-ACBB-FD73A5C70F03}|borrador\\veterinaria.csproj|c:\\users\\elarv\\onedrive\\documentos\\proy-fundamentos\\borrador\\frm_login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A7E7DA7D-36A2-48E6-ACBB-FD73A5C70F03}|borrador\\veterinaria.csproj|solutionrelative:borrador\\frm_login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7E7DA7D-36A2-48E6-ACBB-FD73A5C70F03}|borrador\\veterinaria.csproj|c:\\users\\elarv\\onedrive\\documentos\\proy-fundamentos\\borrador\\frm_principal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A7E7DA7D-36A2-48E6-ACBB-FD73A5C70F03}|borrador\\veterinaria.csproj|solutionrelative:borrador\\frm_principal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,59 +26,58 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\elarv\\OneDrive\\Documentos\\proy-fundamentos\\borrador\\Program.cs",
-              "RelativeDocumentMoniker": "borrador\\Program.cs",
-              "ToolTip": "C:\\Users\\elarv\\OneDrive\\Documentos\\proy-fundamentos\\borrador\\Program.cs",
-              "RelativeToolTip": "borrador\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAtAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-12T02:58:53.597Z"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "frm_principal.cs",
-              "DocumentMoniker": "C:\\Users\\elarv\\OneDrive\\Documentos\\proy-fundamentos\\borrador\\frm_principal.cs",
-              "RelativeDocumentMoniker": "borrador\\frm_principal.cs",
-              "ToolTip": "C:\\Users\\elarv\\OneDrive\\Documentos\\proy-fundamentos\\borrador\\frm_principal.cs",
-              "RelativeToolTip": "borrador\\frm_principal.cs",
-              "ViewState": "AQIAACQAAAAAAAAAAIA/wDEAAAAlAAAA",
+              "Title": "frm_login.cs",
+              "DocumentMoniker": "C:\\Users\\elarv\\OneDrive\\Documentos\\proy-fundamentos\\borrador\\frm_login.cs",
+              "RelativeDocumentMoniker": "borrador\\frm_login.cs",
+              "ToolTip": "C:\\Users\\elarv\\OneDrive\\Documentos\\proy-fundamentos\\borrador\\frm_login.cs*",
+              "RelativeToolTip": "borrador\\frm_login.cs*",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABQAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-12T02:53:58.704Z",
+              "WhenOpened": "2024-05-16T22:14:48.268Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "frm_principal.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\elarv\\OneDrive\\Documentos\\proy-fundamentos\\borrador\\frm_principal.cs",
-              "RelativeDocumentMoniker": "borrador\\frm_principal.cs",
-              "ToolTip": "C:\\Users\\elarv\\OneDrive\\Documentos\\proy-fundamentos\\borrador\\frm_principal.cs [Design]",
-              "RelativeToolTip": "borrador\\frm_principal.cs [Design]",
+              "DocumentIndex": 2,
+              "Title": "frm_login.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\elarv\\OneDrive\\Documentos\\proy-fundamentos\\borrador\\frm_login.cs",
+              "RelativeDocumentMoniker": "borrador\\frm_login.cs",
+              "ToolTip": "C:\\Users\\elarv\\OneDrive\\Documentos\\proy-fundamentos\\borrador\\frm_login.cs [Design]*",
+              "RelativeToolTip": "borrador\\frm_login.cs [Design]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-12T02:19:58.345Z",
+              "WhenOpened": "2024-05-16T22:14:46.138Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "frm_registro_mascotas.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\elarv\\OneDrive\\Documentos\\proy-fundamentos\\borrador\\frm_registro_mascotas.cs",
-              "RelativeDocumentMoniker": "borrador\\frm_registro_mascotas.cs",
-              "ToolTip": "C:\\Users\\elarv\\OneDrive\\Documentos\\proy-fundamentos\\borrador\\frm_registro_mascotas.cs [Design]",
-              "RelativeToolTip": "borrador\\frm_registro_mascotas.cs [Design]",
+              "DocumentIndex": 0,
+              "Title": "frm_principal.cs",
+              "DocumentMoniker": "C:\\Users\\elarv\\OneDrive\\Documentos\\proy-fundamentos\\borrador\\frm_principal.cs",
+              "RelativeDocumentMoniker": "borrador\\frm_principal.cs",
+              "ToolTip": "C:\\Users\\elarv\\OneDrive\\Documentos\\proy-fundamentos\\borrador\\frm_principal.cs*",
+              "RelativeToolTip": "borrador\\frm_principal.cs*",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAABYAAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-12T02:22:25.612Z"
+              "WhenOpened": "2024-05-16T22:09:16.791Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "frm_principal.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\elarv\\OneDrive\\Documentos\\proy-fundamentos\\borrador\\frm_principal.cs",
+              "RelativeDocumentMoniker": "borrador\\frm_principal.cs",
+              "ToolTip": "C:\\Users\\elarv\\OneDrive\\Documentos\\proy-fundamentos\\borrador\\frm_principal.cs [Design]*",
+              "RelativeToolTip": "borrador\\frm_principal.cs [Design]*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-16T22:09:11.228Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }

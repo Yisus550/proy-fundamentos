@@ -19,8 +19,7 @@ namespace borrador
 
         private void btningresar_Click(object sender, EventArgs e)
         {
-            new frm_registro_mascotas().Show();
-            this.Hide();
+            new frm_principal().closeLogin();
         }
     }
 }

@@ -12,9 +12,17 @@ namespace borrador
 {
     public partial class frm_principal : Form
     {
+        Boolean loginSucces = false;
+
         public frm_principal()
         {
             InitializeComponent();
+            openChildForm(new frm_login());
+        }
+
+        public void closeLogin()
+        {
+            panelChildForm.Controls.Clear();
         }
 
         public static Form MainForm { get; set; }
