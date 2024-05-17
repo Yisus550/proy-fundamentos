@@ -30,6 +30,9 @@
         {
             this.panelMenu = new System.Windows.Forms.Panel();
             this.btnRegistroMascotas = new System.Windows.Forms.Button();
+            this.submenuCitas = new System.Windows.Forms.Panel();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.btnRegistroCitas = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
@@ -38,15 +41,12 @@
             this.panelChildForm = new System.Windows.Forms.Panel();
             this.panelMenu2 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
-            this.submenuCitas = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
             this.panelMenu.SuspendLayout();
+            this.submenuCitas.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logotipo)).BeginInit();
             this.panelChildForm.SuspendLayout();
             this.panelMenu2.SuspendLayout();
-            this.submenuCitas.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -76,9 +76,56 @@
             this.btnRegistroMascotas.Name = "btnRegistroMascotas";
             this.btnRegistroMascotas.Size = new System.Drawing.Size(350, 55);
             this.btnRegistroMascotas.TabIndex = 3;
-            this.btnRegistroMascotas.Text = "Registro de mascotas";
+            this.btnRegistroMascotas.Text = "Citas";
+            this.btnRegistroMascotas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRegistroMascotas.UseVisualStyleBackColor = false;
             this.btnRegistroMascotas.Click += new System.EventHandler(this.btnRegistroMascotas_Click);
+            // 
+            // submenuCitas
+            // 
+            this.submenuCitas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(134)))), ((int)(((byte)(138)))));
+            this.submenuCitas.Controls.Add(this.button4);
+            this.submenuCitas.Controls.Add(this.button3);
+            this.submenuCitas.Dock = System.Windows.Forms.DockStyle.Top;
+            this.submenuCitas.Location = new System.Drawing.Point(0, 277);
+            this.submenuCitas.Name = "submenuCitas";
+            this.submenuCitas.Size = new System.Drawing.Size(350, 118);
+            this.submenuCitas.TabIndex = 4;
+            this.submenuCitas.Visible = false;
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(134)))), ((int)(((byte)(138)))));
+            this.button4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(248)))), ((int)(((byte)(247)))));
+            this.button4.Location = new System.Drawing.Point(0, 55);
+            this.button4.Margin = new System.Windows.Forms.Padding(4);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(350, 55);
+            this.button4.TabIndex = 4;
+            this.button4.Text = "Historial Clinico";
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(134)))), ((int)(((byte)(138)))));
+            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(248)))), ((int)(((byte)(247)))));
+            this.button3.Location = new System.Drawing.Point(0, 0);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(350, 55);
+            this.button3.TabIndex = 3;
+            this.button3.Text = "Registro";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // btnRegistroCitas
             // 
@@ -93,7 +140,7 @@
             this.btnRegistroCitas.Name = "btnRegistroCitas";
             this.btnRegistroCitas.Size = new System.Drawing.Size(350, 55);
             this.btnRegistroCitas.TabIndex = 2;
-            this.btnRegistroCitas.Text = "Citas";
+            this.btnRegistroCitas.Text = "Mascotas";
             this.btnRegistroCitas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRegistroCitas.UseVisualStyleBackColor = false;
             this.btnRegistroCitas.Click += new System.EventHandler(this.btnRegistroCitas_Click);
@@ -183,52 +230,6 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // submenuCitas
-            // 
-            this.submenuCitas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(134)))), ((int)(((byte)(138)))));
-            this.submenuCitas.Controls.Add(this.button4);
-            this.submenuCitas.Controls.Add(this.button3);
-            this.submenuCitas.Dock = System.Windows.Forms.DockStyle.Top;
-            this.submenuCitas.Location = new System.Drawing.Point(0, 277);
-            this.submenuCitas.Name = "submenuCitas";
-            this.submenuCitas.Size = new System.Drawing.Size(350, 118);
-            this.submenuCitas.TabIndex = 4;
-            this.submenuCitas.Visible = false;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(134)))), ((int)(((byte)(138)))));
-            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(248)))), ((int)(((byte)(247)))));
-            this.button3.Location = new System.Drawing.Point(0, 0);
-            this.button3.Margin = new System.Windows.Forms.Padding(4);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(350, 55);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "Registro";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(134)))), ((int)(((byte)(138)))));
-            this.button4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(248)))), ((int)(((byte)(247)))));
-            this.button4.Location = new System.Drawing.Point(0, 55);
-            this.button4.Margin = new System.Windows.Forms.Padding(4);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(350, 55);
-            this.button4.TabIndex = 4;
-            this.button4.Text = "Historial Clinico";
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
             // frm_principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -243,12 +244,12 @@
             this.Text = "Veterinaria";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panelMenu.ResumeLayout(false);
+            this.submenuCitas.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logotipo)).EndInit();
             this.panelChildForm.ResumeLayout(false);
             this.panelMenu2.ResumeLayout(false);
-            this.submenuCitas.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
