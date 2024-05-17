@@ -10,17 +10,11 @@ using System.Windows.Forms;
 
 namespace borrador
 {
-    public partial class frm_login : Form
+    public partial class frm_registro_citas : Form
     {
-        public frm_login()
+        public frm_registro_citas()
         {
             InitializeComponent();
-        }
-
-        private void btningresar_Click(object sender, EventArgs e)
-        {
-            new frm_principal().closeLogin();
-            new frm_principal().setPanelMenuEnable(true);
         }
     }
 }

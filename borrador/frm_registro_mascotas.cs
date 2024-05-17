@@ -19,7 +19,8 @@ namespace borrador
 
         private void btnhistorial_Click(object sender, EventArgs e)
         {
-            new frm_principal().openChildForm(new frm_historial_clinico());
+            new frm_historial_clinico().ShowDialog();
+            this.Hide();
         }
     }
 }

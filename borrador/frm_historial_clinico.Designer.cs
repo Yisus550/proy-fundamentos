@@ -38,14 +38,11 @@
             this.fechanacimiento = new System.Windows.Forms.TextBox();
             this.txtraza = new System.Windows.Forms.TextBox();
             this.raza = new System.Windows.Forms.TextBox();
-            this.checkotro = new System.Windows.Forms.CheckBox();
             this.checkEno = new System.Windows.Forms.CheckBox();
             this.checkEsi = new System.Windows.Forms.CheckBox();
             this.esterilizado = new System.Windows.Forms.TextBox();
             this.txtsexo = new System.Windows.Forms.TextBox();
             this.sexo = new System.Windows.Forms.TextBox();
-            this.checkgato = new System.Windows.Forms.CheckBox();
-            this.checkperro = new System.Windows.Forms.CheckBox();
             this.especie = new System.Windows.Forms.TextBox();
             this.txtnombreM = new System.Windows.Forms.TextBox();
             this.nom = new System.Windows.Forms.TextBox();
@@ -78,10 +75,6 @@
             this.textBox14 = new System.Windows.Forms.TextBox();
             this.textBox15 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.logotipo = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.huellas = new System.Windows.Forms.PictureBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.textBox25 = new System.Windows.Forms.TextBox();
             this.dateTimePicker5 = new System.Windows.Forms.DateTimePicker();
@@ -137,10 +130,19 @@
             this.btnenviar = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.logotipo = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.huellas = new System.Windows.Forms.PictureBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.logotipo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.huellas)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtotro
@@ -236,18 +238,6 @@
             this.raza.TabIndex = 67;
             this.raza.Text = "Raza:";
             // 
-            // checkotro
-            // 
-            this.checkotro.AutoSize = true;
-            this.checkotro.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkotro.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(158)))), ((int)(((byte)(162)))));
-            this.checkotro.Location = new System.Drawing.Point(747, 81);
-            this.checkotro.Name = "checkotro";
-            this.checkotro.Size = new System.Drawing.Size(72, 28);
-            this.checkotro.TabIndex = 66;
-            this.checkotro.Text = "Otro";
-            this.checkotro.UseVisualStyleBackColor = true;
-            // 
             // checkEno
             // 
             this.checkEno.AutoSize = true;
@@ -304,30 +294,6 @@
             this.sexo.Size = new System.Drawing.Size(81, 24);
             this.sexo.TabIndex = 61;
             this.sexo.Text = "Sexo:";
-            // 
-            // checkgato
-            // 
-            this.checkgato.AutoSize = true;
-            this.checkgato.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkgato.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(158)))), ((int)(((byte)(162)))));
-            this.checkgato.Location = new System.Drawing.Point(636, 81);
-            this.checkgato.Name = "checkgato";
-            this.checkgato.Size = new System.Drawing.Size(71, 28);
-            this.checkgato.TabIndex = 60;
-            this.checkgato.Text = "Gato";
-            this.checkgato.UseVisualStyleBackColor = true;
-            // 
-            // checkperro
-            // 
-            this.checkperro.AutoSize = true;
-            this.checkperro.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkperro.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(158)))), ((int)(((byte)(162)))));
-            this.checkperro.Location = new System.Drawing.Point(519, 81);
-            this.checkperro.Name = "checkperro";
-            this.checkperro.Size = new System.Drawing.Size(77, 28);
-            this.checkperro.TabIndex = 59;
-            this.checkperro.Text = "Perro";
-            this.checkperro.UseVisualStyleBackColor = true;
             // 
             // especie
             // 
@@ -679,42 +645,6 @@
             this.label8.Size = new System.Drawing.Size(221, 29);
             this.label8.TabIndex = 123;
             this.label8.Text = "Registro de consultas";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::borrador.Properties.Resources.icons8_citas_47;
-            this.pictureBox2.Location = new System.Drawing.Point(24, 666);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(47, 52);
-            this.pictureBox2.TabIndex = 124;
-            this.pictureBox2.TabStop = false;
-            // 
-            // logotipo
-            // 
-            this.logotipo.Image = ((System.Drawing.Image)(resources.GetObject("logotipo.Image")));
-            this.logotipo.Location = new System.Drawing.Point(1262, 2);
-            this.logotipo.Name = "logotipo";
-            this.logotipo.Size = new System.Drawing.Size(255, 152);
-            this.logotipo.TabIndex = 122;
-            this.logotipo.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::borrador.Properties.Resources.icons8_cono_de_perro_47;
-            this.pictureBox1.Location = new System.Drawing.Point(24, 221);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(47, 52);
-            this.pictureBox1.TabIndex = 78;
-            this.pictureBox1.TabStop = false;
-            // 
-            // huellas
-            // 
-            this.huellas.Image = global::borrador.Properties.Resources.Paw_Print________Square_Sticker___Zazzle__1_;
-            this.huellas.Location = new System.Drawing.Point(12, 12);
-            this.huellas.Name = "huellas";
-            this.huellas.Size = new System.Drawing.Size(47, 42);
-            this.huellas.TabIndex = 54;
-            this.huellas.TabStop = false;
             // 
             // comboBox1
             // 
@@ -1335,15 +1265,96 @@
             this.button2.Text = "EDITAR";
             this.button2.UseVisualStyleBackColor = true;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::borrador.Properties.Resources.icons8_citas_47;
+            this.pictureBox2.Location = new System.Drawing.Point(24, 666);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(47, 52);
+            this.pictureBox2.TabIndex = 124;
+            this.pictureBox2.TabStop = false;
+            // 
+            // logotipo
+            // 
+            this.logotipo.Image = ((System.Drawing.Image)(resources.GetObject("logotipo.Image")));
+            this.logotipo.Location = new System.Drawing.Point(1262, 2);
+            this.logotipo.Name = "logotipo";
+            this.logotipo.Size = new System.Drawing.Size(255, 152);
+            this.logotipo.TabIndex = 122;
+            this.logotipo.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::borrador.Properties.Resources.icons8_cono_de_perro_47;
+            this.pictureBox1.Location = new System.Drawing.Point(24, 221);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(47, 52);
+            this.pictureBox1.TabIndex = 78;
+            this.pictureBox1.TabStop = false;
+            // 
+            // huellas
+            // 
+            this.huellas.Image = global::borrador.Properties.Resources.Paw_Print________Square_Sticker___Zazzle__1_;
+            this.huellas.Location = new System.Drawing.Point(12, 12);
+            this.huellas.Name = "huellas";
+            this.huellas.Size = new System.Drawing.Size(47, 42);
+            this.huellas.TabIndex = 54;
+            this.huellas.TabStop = false;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.radioButton3);
+            this.groupBox1.Controls.Add(this.radioButton2);
+            this.groupBox1.Controls.Add(this.radioButton1);
+            this.groupBox1.Font = new System.Drawing.Font("Comic Sans MS", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(158)))), ((int)(((byte)(162)))));
+            this.groupBox1.Location = new System.Drawing.Point(511, 68);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(279, 44);
+            this.groupBox1.TabIndex = 171;
+            this.groupBox1.TabStop = false;
+            // 
+            // radioButton3
+            // 
+            this.radioButton3.AutoSize = true;
+            this.radioButton3.Location = new System.Drawing.Point(165, 16);
+            this.radioButton3.Name = "radioButton3";
+            this.radioButton3.Size = new System.Drawing.Size(71, 28);
+            this.radioButton3.TabIndex = 2;
+            this.radioButton3.TabStop = true;
+            this.radioButton3.Text = "Otro";
+            this.radioButton3.UseVisualStyleBackColor = true;
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(90, 16);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(69, 28);
+            this.radioButton2.TabIndex = 1;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "Gato";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(7, 16);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(77, 28);
+            this.radioButton1.TabIndex = 0;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Perro";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
             // frm_historial_clinico
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.AutoSize = true;
-            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(248)))), ((int)(((byte)(247)))));
             this.ClientSize = new System.Drawing.Size(1516, 1055);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnenviar);
@@ -1439,14 +1450,11 @@
             this.Controls.Add(this.fechanacimiento);
             this.Controls.Add(this.txtraza);
             this.Controls.Add(this.raza);
-            this.Controls.Add(this.checkotro);
             this.Controls.Add(this.checkEno);
             this.Controls.Add(this.checkEsi);
             this.Controls.Add(this.esterilizado);
             this.Controls.Add(this.txtsexo);
             this.Controls.Add(this.sexo);
-            this.Controls.Add(this.checkgato);
-            this.Controls.Add(this.checkperro);
             this.Controls.Add(this.especie);
             this.Controls.Add(this.txtnombreM);
             this.Controls.Add(this.nom);
@@ -1459,6 +1467,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.logotipo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.huellas)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1475,14 +1485,11 @@
         private System.Windows.Forms.TextBox fechanacimiento;
         private System.Windows.Forms.TextBox txtraza;
         private System.Windows.Forms.TextBox raza;
-        private System.Windows.Forms.CheckBox checkotro;
         private System.Windows.Forms.CheckBox checkEno;
         private System.Windows.Forms.CheckBox checkEsi;
         private System.Windows.Forms.TextBox esterilizado;
         private System.Windows.Forms.TextBox txtsexo;
         private System.Windows.Forms.TextBox sexo;
-        private System.Windows.Forms.CheckBox checkgato;
-        private System.Windows.Forms.CheckBox checkperro;
         private System.Windows.Forms.TextBox especie;
         private System.Windows.Forms.TextBox txtnombreM;
         private System.Windows.Forms.TextBox nom;
@@ -1574,5 +1581,9 @@
         private System.Windows.Forms.Button btnenviar;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.RadioButton radioButton3;
+        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton radioButton1;
     }
 }
