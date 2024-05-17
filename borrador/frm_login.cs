@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace borrador
 {
-    public partial class frm_login : Form
+    public partial class frm_login : Form 
     {
         public frm_login()
         {
@@ -20,6 +20,7 @@ namespace borrador
         private void btningresar_Click(object sender, EventArgs e)
         {
             new frm_principal().closeLogin();
+            new frm_principal().setPanelMenuEnable(true);
         }
     }
 }

@@ -25,6 +25,11 @@ namespace borrador
             panelChildForm.Controls.Clear();
         }
 
+        public void setPanelMenuEnable(Boolean value)
+        {
+            panelMenu.Enabled = value;
+        }
+
         public static Form MainForm { get; set; }
 
         private static Form activeForm = null;
@@ -42,6 +47,17 @@ namespace borrador
             childForm.Show();
         }
 
+        private void setVisibleSubmenu(Panel panel)
+        {
+            if (!panel.Visible)
+            {
+                panel.Visible = true;
+            } else
+            {
+                panel.Visible = false;
+            }
+        }
+
         private void btnRegistroMascotas_Click(object sender, EventArgs e)
         {
             openChildForm(new frm_registro_mascotas());
@@ -57,6 +73,21 @@ namespace borrador
         {
             panelMenu.Visible = true;
             panelMenu2.Visible = false;
+        }
+
+        private void btnRegistroCitas_Click(object sender, EventArgs e)
+        {
+            setVisibleSubmenu(submenuCitas);
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            openChildForm(new frm_registro_mascotas());
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            openChildForm(new frm_historial_clinico());
         }
     }
 }

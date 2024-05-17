@@ -1335,10 +1335,13 @@
             this.button2.Text = "EDITAR";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // HistorialClinico
+            // frm_historial_clinico
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
+            this.AutoSize = true;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(248)))), ((int)(((byte)(247)))));
             this.ClientSize = new System.Drawing.Size(1516, 1055);
             this.Controls.Add(this.button2);
@@ -1449,7 +1452,7 @@
             this.Controls.Add(this.nom);
             this.Controls.Add(this.txtdatosMascotas);
             this.Controls.Add(this.huellas);
-            this.Name = "HistorialClinico";
+            this.Name = "frm_historial_clinico";
             this.Text = "HistorialClinico";
             this.Load += new System.EventHandler(this.HistorialClinico_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

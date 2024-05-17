@@ -66,7 +66,6 @@
             this.direccion = new System.Windows.Forms.TextBox();
             this.txtdireccion = new System.Windows.Forms.TextBox();
             this.datosDueño = new System.Windows.Forms.TextBox();
-            this.btnhistorial = new System.Windows.Forms.Button();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
@@ -486,18 +485,6 @@
             this.datosDueño.TabIndex = 47;
             this.datosDueño.Text = "Datos del dueño";
             // 
-            // btnhistorial
-            // 
-            this.btnhistorial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnhistorial.Font = new System.Drawing.Font("Comic Sans MS", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnhistorial.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(160)))), ((int)(((byte)(176)))));
-            this.btnhistorial.Location = new System.Drawing.Point(887, 651);
-            this.btnhistorial.Name = "btnhistorial";
-            this.btnhistorial.Size = new System.Drawing.Size(200, 42);
-            this.btnhistorial.TabIndex = 54;
-            this.btnhistorial.Text = "Ver historial clinico";
-            this.btnhistorial.UseVisualStyleBackColor = true;
-            // 
             // pictureBox8
             // 
             this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
@@ -566,7 +553,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(248)))), ((int)(((byte)(247)))));
             this.ClientSize = new System.Drawing.Size(1149, 751);
-            this.Controls.Add(this.btnhistorial);
             this.Controls.Add(this.txtotro);
             this.Controls.Add(this.btnenviar);
             this.Controls.Add(this.pictureBox8);
@@ -670,7 +656,6 @@
         private System.Windows.Forms.TextBox direccion;
         private System.Windows.Forms.TextBox txtdireccion;
         private System.Windows.Forms.TextBox datosDueño;
-        private System.Windows.Forms.Button btnhistorial;
     }
 }
 

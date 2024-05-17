@@ -16,5 +16,10 @@ namespace borrador
         {
             InitializeComponent();
         }
+
+        private void btnhistorial_Click(object sender, EventArgs e)
+        {
+            new frm_principal().openChildForm(new frm_historial_clinico());
+        }
     }
 }
