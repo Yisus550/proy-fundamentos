@@ -11,3 +11,4 @@ C:\Users\elarv\OneDrive\Documentos\proy-fundamentos\borrador\obj\Debug\veterinar
 C:\Users\elarv\OneDrive\Documentos\proy-fundamentos\borrador\obj\Debug\veterinaria.csproj.CoreCompileInputs.cache
 C:\Users\elarv\OneDrive\Documentos\proy-fundamentos\borrador\obj\Debug\borrador.exe
 C:\Users\elarv\OneDrive\Documentos\proy-fundamentos\borrador\obj\Debug\borrador.pdb
+C:\Users\elarv\OneDrive\Documentos\proy-fundamentos\borrador\obj\Debug\borrador.frm_registro_citas.resources

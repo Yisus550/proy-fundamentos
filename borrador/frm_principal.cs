@@ -60,7 +60,7 @@ namespace borrador
 
         private void btnRegistroMascotas_Click(object sender, EventArgs e)
         {
-            openChildForm(new frm_registro_mascotas());
+            openChildForm(new frm_registro_citas());
         }
 
         private void button1_Click(object sender, EventArgs e)

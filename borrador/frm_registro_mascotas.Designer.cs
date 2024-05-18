@@ -485,19 +485,6 @@
             this.datosDueño.TabIndex = 47;
             this.datosDueño.Text = "Datos del dueño";
             // 
-            // btnhistorial
-            // 
-            this.btnhistorial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnhistorial.Font = new System.Drawing.Font("Comic Sans MS", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnhistorial.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(160)))), ((int)(((byte)(176)))));
-            this.btnhistorial.Location = new System.Drawing.Point(887, 651);
-            this.btnhistorial.Name = "btnhistorial";
-            this.btnhistorial.Size = new System.Drawing.Size(200, 42);
-            this.btnhistorial.TabIndex = 54;
-            this.btnhistorial.Text = "Ver historial clinico";
-            this.btnhistorial.UseVisualStyleBackColor = true;
-            this.btnhistorial.Click += new System.EventHandler(this.btnhistorial_Click);
-            // 
             // pictureBox8
             // 
             this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));

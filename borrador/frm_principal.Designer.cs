@@ -52,9 +52,9 @@
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(160)))), ((int)(((byte)(176)))));
-            this.panelMenu.Controls.Add(this.btnRegistroMascotas);
             this.panelMenu.Controls.Add(this.submenuCitas);
             this.panelMenu.Controls.Add(this.btnRegistroCitas);
+            this.panelMenu.Controls.Add(this.btnRegistroMascotas);
             this.panelMenu.Controls.Add(this.panel2);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(60, 0);
@@ -71,7 +71,7 @@
             this.btnRegistroMascotas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegistroMascotas.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistroMascotas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(248)))), ((int)(((byte)(247)))));
-            this.btnRegistroMascotas.Location = new System.Drawing.Point(0, 395);
+            this.btnRegistroMascotas.Location = new System.Drawing.Point(0, 222);
             this.btnRegistroMascotas.Margin = new System.Windows.Forms.Padding(4);
             this.btnRegistroMascotas.Name = "btnRegistroMascotas";
             this.btnRegistroMascotas.Size = new System.Drawing.Size(350, 55);
@@ -87,7 +87,7 @@
             this.submenuCitas.Controls.Add(this.button4);
             this.submenuCitas.Controls.Add(this.button3);
             this.submenuCitas.Dock = System.Windows.Forms.DockStyle.Top;
-            this.submenuCitas.Location = new System.Drawing.Point(0, 277);
+            this.submenuCitas.Location = new System.Drawing.Point(0, 332);
             this.submenuCitas.Name = "submenuCitas";
             this.submenuCitas.Size = new System.Drawing.Size(350, 118);
             this.submenuCitas.TabIndex = 4;
@@ -135,7 +135,7 @@
             this.btnRegistroCitas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegistroCitas.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistroCitas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(248)))), ((int)(((byte)(247)))));
-            this.btnRegistroCitas.Location = new System.Drawing.Point(0, 222);
+            this.btnRegistroCitas.Location = new System.Drawing.Point(0, 277);
             this.btnRegistroCitas.Margin = new System.Windows.Forms.Padding(4);
             this.btnRegistroCitas.Name = "btnRegistroCitas";
             this.btnRegistroCitas.Size = new System.Drawing.Size(350, 55);
@@ -179,7 +179,7 @@
             this.nombreveterinaria1.Location = new System.Drawing.Point(39, 160);
             this.nombreveterinaria1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.nombreveterinaria1.Name = "nombreveterinaria1";
-            this.nombreveterinaria1.Size = new System.Drawing.Size(279, 33);
+            this.nombreveterinaria1.Size = new System.Drawing.Size(279, 26);
             this.nombreveterinaria1.TabIndex = 4;
             this.nombreveterinaria1.Text = "PATITAS CONTENTAS";
             // 
