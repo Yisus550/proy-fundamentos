@@ -22,5 +22,10 @@ namespace borrador
             new frm_principal().closeLogin();
             new frm_principal().setPanelMenuEnable(true);
         }
+
+        private void btningresar_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
