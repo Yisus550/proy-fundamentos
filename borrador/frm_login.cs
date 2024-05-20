@@ -30,20 +30,17 @@ namespace borrador
             new frm_principal().setPanelMenuEnable(true);
         }
 
-        private void btningresar_Click_1(object sender, EventArgs e)
+        private void btningresar_Click_1(object sender, EventArgs e)  //"Server=LPKM\\SQLEXPRESS;" + "Database=prueba;" + "User Id=Admin;" "Password=admin123;";
         {
-            string connectionString = "Server=LPKM\\SQLEXPRESS;" +
-                                      "Database=prueba;" +
-                                      "User Id=Admin;" +
-                                      "Password=admin123;";
+            string connectionString = "Server=localhost;" + "Database=veterinaria;" + "User Id=root;" +  "Password=;";
 
-            string query = "SELECT COUNT(1) FROM Usuarios WHERE Usuario=@Usuario AND Contraseña=@Contraseña";
+            string query = "SELECT COUNT(1) FROM usuarios WHERE Usuario=@nombre_usuario AND Contraseña=@contrasena";
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 SqlCommand command = new SqlCommand(query, connection);
                 command.Parameters.AddWithValue("@Usuario", txt_Usuario.Text);
-                command.Parameters.AddWithValue("@Contraseña", txt_Contra.Text);
+                command.Parameters.AddWithValue("@contrasena", txt_Contra.Text);
 
                 connection.Open();
                 int count = (int)command.ExecuteScalar();
