@@ -18,13 +18,15 @@ namespace borrador
         {
             InitializeComponent();
             openChildForm(new frm_login());
+
+           
         }
 
         public void closeLogin()
         {
             panelChildForm.Controls.Clear();
         }
-
+ 
         public void setPanelMenuEnable(Boolean value)
         {
             panelMenu.Enabled = value;
