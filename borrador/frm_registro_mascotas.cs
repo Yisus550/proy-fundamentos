@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Data.SqlClient;
+using MySql.Data.MySqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -13,10 +13,12 @@ namespace borrador
 {
     public partial class frm_registro_mascotas : Form  //"Server=LPKM\\SQLEXPRESS      ;Database= prueba    
     {
-        private string connectionString = "Server=localhost      ;Database= veterinaria           ;Integrated Security=True;"; 
+        private MySqlConnection connection;
         public frm_registro_mascotas()
         {
             InitializeComponent();
+            string connectionString = "server=localhost;database=veterinaria;uid=Jose;pwd=perrito123;";
+            connection = new MySqlConnection(connectionString);
         }
 
         private void btnhistorial_Click(object sender, EventArgs e)
@@ -27,131 +29,107 @@ namespace borrador
 
         private void btnenviar_Click(object sender, EventArgs e)
         {
-                                
-
-            string nombreDueno = txtnomDueño.Text;
-            string apellidoDueno = txtapellido.Text;
-            string correoDueno = txtcorreo.Text;
-            string telefonoDueno = txtTelefono.Text;
-            string direccionDueno = txtdireccion.Text;
+            string nombre = txtnomDueño.Text;
+            string correo = txtcorreo.Text;
+            string apellido = txtapellido.Text;
+            string telefono = txtTelefono.Text;
+            string direccion = txtdireccion.Text;
 
             string nombreMascota = txtnombreM.Text;
-            string sexoMascota = txtsexo.Text;
-            DateTime fechaNacimientoMascota = fecha.Value;
-            string especieMascota = GetSelectedEspecie();
-            bool esterilizadoMascota = checkEsi.Checked;
-            string razaMascota = txtraza.Text;
-            string edadMascota = txtedad.Text;  
-            string colorMascota = txtcolor.Text;
+            string sexo = txtsexo.Text;
+            DateTime fechaNacimiento = fecha.Value;
+            string especie = checkperro.Checked ? "Perro" : checkgato.Checked ? "Gato" : "Otros";
+            bool esterilizado = checkEsi.Checked;
+            string raza = txtraza.Text;
+            int edad = int.Parse(txtedad.Text);
+            string color = txtcolor.Text;
 
+            int ownerId;
+            InsertarOActualizarDueño(nombre, correo, apellido, telefono, direccion, out ownerId);
+            InsertarMascota(ownerId, nombreMascota, sexo, fechaNacimiento, especie, esterilizado, raza, edad, color);
+            LimpiarParametro();
+        }
+        private void InsertarOActualizarDueño(string nombre, string correo, string apellido, string telefono, string direccion, out int id_duenio)
+        {
             try
             {
-                using (SqlConnection connection = new SqlConnection(connectionString))
+                connection.Open();
+                string query = "SELECT id FROM datosduenios WHERE correo = @correo";
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+                cmd.Parameters.AddWithValue("@correo", correo);
+                var result = cmd.ExecuteScalar();
+
+                if (result != null)
                 {
-                    connection.Open();
-
-                    // Verificar si el dueño ya existe
-                    int duenoID = GetDuenoID(connection, nombreDueno, apellidoDueno, correoDueno, telefonoDueno);
-
-                    if (duenoID == 0)
-                    {
-                        // Insertar un nuevo dueño
-                        duenoID = InsertarDueno(connection, nombreDueno, apellidoDueno, correoDueno, telefonoDueno, direccionDueno);
-                    }
-
-                    // Insertar la mascota
-                    InsertarMascota(connection, duenoID, nombreMascota, sexoMascota, fechaNacimientoMascota, especieMascota, esterilizadoMascota, razaMascota, edadMascota ,colorMascota);
-
-                    MessageBox.Show("Registro exitoso.");
-                    LimpiarCampos();
+                    id_duenio = Convert.ToInt32(result);
+                    query = "UPDATE datosduenio SET nombre = @nombre, apellido = @apellido, telefono = @telefono, direccion = @direccion WHERE id = @id";
+                    cmd = new MySqlCommand(query, connection);
+                    cmd.Parameters.AddWithValue("@id", id_duenio);
                 }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error: " + ex.Message);
-            }
-        }
+                else
+                {
+                    query = "INSERT INTO datosduenio (nombre, correo, apellido, telefono, direccion) VALUES (@nombre, @correo, @apellido, @telefono, @direccion)";
+                    cmd = new MySqlCommand(query, connection);
+                    id_duenio = (int)cmd.LastInsertedId;
+                }
 
-        private int GetDuenoID(SqlConnection connection, string nombre, string apellido, string correo, string telefono)
-        {
-            string query = "SELECT id_duenio FROM datosDueno WHERE nombre = @nombre AND apellido = @apellido AND correo = @correo AND telefono = @telefono";
-            using (SqlCommand cmd = new SqlCommand(query, connection))
-            {
                 cmd.Parameters.AddWithValue("@nombre", nombre);
                 cmd.Parameters.AddWithValue("@apellido", apellido);
-                cmd.Parameters.AddWithValue("@correo", correo);
                 cmd.Parameters.AddWithValue("@telefono", telefono);
-
-                object result = cmd.ExecuteScalar();
-                return result != null ? Convert.ToInt32(result) : 0;
-            }
-        }
-
-        private int InsertarDueno(SqlConnection connection, string nombre, string apellido, string correo, string telefono, string direccion)
-        {
-            string query = "INSERT INTO datosduenio (nombre, correo, direccion,  apellido,telefono) OUTPUT INSERTED.id_duenio VALUES (@nombre, @correo, @direccion, @apellido, @telefono)";
-            using (SqlCommand cmd = new SqlCommand(query, connection))
-            {
-                cmd.Parameters.AddWithValue("@nombre", nombre);
-                cmd.Parameters.AddWithValue("@correo", correo);
                 cmd.Parameters.AddWithValue("@direccion", direccion);
-                cmd.Parameters.AddWithValue("@apellido", apellido);
-                cmd.Parameters.AddWithValue("@telefono", telefono);
-                return (int)cmd.ExecuteScalar();
+                cmd.ExecuteNonQuery();
+            }
+            finally
+            {
+                connection.Close();
             }
         }
 
-        private void InsertarMascota(SqlConnection connection, int id_duenio, string nombre, string sexo, DateTime fechaNacimiento, string especie, bool esterilizado, string raza, string edad, string color)
+        private void InsertarMascota(int ownerId, string nombreMascota, string sexo, DateTime fechaNacimiento, string especie, bool esterilizado, string raza, int edad, string color)
         {
-            string query = "INSERT INTO datosmascota (id_duenio, nombre, sexo, fecha_nacimiento, especie, esterilizado, raza, edad, color) VALUES (@id_duenio, @nombre, " +
-                "@sexo, @fecha_nacimiento, @especie," +" @esterilizado, @raza,@edad, @color)";
-            using (SqlCommand cmd = new SqlCommand(query, connection))
+            try
             {
-                cmd.Parameters.AddWithValue("@id_duenio", id_duenio);
-                cmd.Parameters.AddWithValue("@nombre", nombre);
+                connection.Open();
+                string query = "INSERT INTO datosmascota (ownerId, nombreMascota, sexo, fechaNacimiento, especie, esterilizado, raza, edad, color) " +
+                               "VALUES (@ownerId, @nombreMascota, @sexo, @fechaNacimiento, @especie, @esterilizado, @raza, @edad, @color)";
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+                cmd.Parameters.AddWithValue("@ownerId", ownerId);
+                cmd.Parameters.AddWithValue("@nombreMascota", nombreMascota);
                 cmd.Parameters.AddWithValue("@sexo", sexo);
-                cmd.Parameters.AddWithValue("@fecha_nacimiento", fechaNacimiento);
+                cmd.Parameters.AddWithValue("@fechaNacimiento", fechaNacimiento);
                 cmd.Parameters.AddWithValue("@especie", especie);
                 cmd.Parameters.AddWithValue("@esterilizado", esterilizado);
                 cmd.Parameters.AddWithValue("@raza", raza);
                 cmd.Parameters.AddWithValue("@edad", edad);
                 cmd.Parameters.AddWithValue("@color", color);
-
                 cmd.ExecuteNonQuery();
             }
-        }
-            private string GetSelectedEspecie()
-        {
-            if (checkperro.Checked) return "Perro";
-            if (checkgato.Checked) return "Gato";
-            if (checkotro.Checked) return "Otro";
-            return "";
-        }
-    
-            private void LimpiarCampos()
+            finally
             {
-                // Limpiar los campos del dueño
-                txtnomDueño.Text = "";
-                txtapellido.Text = "";
-                txtcorreo.Text = "";
-                txtTelefono.Text = "";
-                txtdireccion.Text = "";
-
-                // Limpiar los campos de la mascota
-                txtnombreM.Text = "";
-                txtsexo.Text = "";
-                fecha.Value = DateTime.Now; // Puedes poner una fecha por defecto si lo prefieres
-                checkperro.Checked = false;
-                checkgato.Checked = false;
-                checkotro.Checked = false;
-                checkEsi.Checked = false;
-                checkEno.Checked = false;
-                txtraza.Text = "";
-                txtcolor.Text = "";
-                txtedad.Text = "";
+                connection.Close();
             }
         }
-   }
+        public void LimpiarParametro() {
+            // Resetear campos
+            txtnomDueño.Clear();
+            txtcorreo.Clear();
+            txtapellido.Clear();
+            txtTelefono.Clear();
+            txtdireccion.Clear();
+            txtnombreM.Clear();
+            txtsexo.Clear();
+            fecha.Value = DateTime.Now;
+            checkperro.Checked = false;
+            checkgato.Checked = false;
+            checkEsi.Checked = false;
+            txtraza.Clear();
+            txtedad.Clear();
+            txtcolor.Clear();
+        }
+
+    }
+}
+   
 
 
 
