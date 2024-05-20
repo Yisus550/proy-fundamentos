@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Data.SqlClient;
+using MySql.Data.MySqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -13,11 +13,14 @@ namespace borrador
 {
     public partial class frm_login : Form
     {
+   
+
         private bool MostrarContraseña = false;
 
         public frm_login()
         {
             InitializeComponent();
+         
             // Establece el botón de previsualización
             btn_mostrarContra.Text = "Mostrar";
             // Asegura que la contraseña esté oculta al cargar el formulario
@@ -30,34 +33,54 @@ namespace borrador
             new frm_principal().setPanelMenuEnable(true);
         }
 
-        private void btningresar_Click_1(object sender, EventArgs e)  //"Server=LPKM\\SQLEXPRESS;" + "Database=prueba;" + "User Id=Admin;" "Password=admin123;";
+        private void btningresar_Click_1(object sender, EventArgs e)
         {
-            string connectionString = "Server=localhost;" + "Database=veterinaria;" + "User Id=root;" +  "Password=;";
+            string connectionString = "Server=localhost;Database=veterinaria;User ID=Jose;Password=perrito123;Pooling=false;";
+            string username = txt_Usuario.Text;
+            string password = txt_Contra.Text;
 
-            string query = "SELECT COUNT(1) FROM usuarios WHERE Usuario=@nombre_usuario AND Contraseña=@contrasena";
+            ValidarUsuario(username, password, connectionString);
+        }
 
-            using (SqlConnection connection = new SqlConnection(connectionString))
+        private void ValidarUsuario(string username, string password, string connectionString)
+        {
+            using (MySqlConnection connection = new MySqlConnection(connectionString))
             {
-                SqlCommand command = new SqlCommand(query, connection);
-                command.Parameters.AddWithValue("@Usuario", txt_Usuario.Text);
-                command.Parameters.AddWithValue("@contrasena", txt_Contra.Text);
-
-                connection.Open();
-                int count = (int)command.ExecuteScalar();
-
-                if (count == 1)
+                try
                 {
-                    this.Hide();
-                    frm_principal princi = new frm_principal();
-                    princi.Show();
-                    this.Close(); 
+                    connection.Open();
+                    string query = "SELECT COUNT(*) FROM usuarios WHERE nombre_usuario = @username AND contrasena = @password";
+                    MySqlCommand cmd = new MySqlCommand(query, connection);
+                    cmd.Parameters.AddWithValue("@username", username);
+                    cmd.Parameters.AddWithValue("@password", password);
+
+                    int userCount = Convert.ToInt32(cmd.ExecuteScalar());
+
+                    if (userCount > 0)
+                    {
+                        MessageBox.Show("Iniciando Sesion");
+                        // Aquí puedes abrir el siguiente formulario o realizar alguna acción
+                        frm_principal princi = new frm_principal();
+                        princi.Show();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Nombre de usuario o contraseña incorrectos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
-                else
+                catch (MySqlException ex)
                 {
-                    MessageBox.Show("Usuario o contraseña incorrectos.");
+                    MessageBox.Show("Error al conectar con la base de datos: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error inesperado: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
+    
+            
+        
 
         private void btn_mostrarContraseña_Click(object sender, EventArgs e)
         {

@@ -17,8 +17,7 @@ namespace borrador
         public frm_registro_mascotas()
         {
             InitializeComponent();
-            string connectionString = "server=localhost;database=veterinaria;uid=Jose;pwd=perrito123;";
-            connection = new MySqlConnection(connectionString);
+            
         }
 
         private void btnhistorial_Click(object sender, EventArgs e)
@@ -29,87 +28,88 @@ namespace borrador
 
         private void btnenviar_Click(object sender, EventArgs e)
         {
-            string nombre = txtnomDueño.Text;
-            string correo = txtcorreo.Text;
-            string apellido = txtapellido.Text;
-            string telefono = txtTelefono.Text;
-            string direccion = txtdireccion.Text;
-
-            string nombreMascota = txtnombreM.Text;
-            string sexo = txtsexo.Text;
-            DateTime fechaNacimiento = fecha.Value;
-            string especie = checkperro.Checked ? "Perro" : checkgato.Checked ? "Gato" : "Otros";
-            bool esterilizado = checkEsi.Checked;
-            string raza = txtraza.Text;
-            int edad = int.Parse(txtedad.Text);
-            string color = txtcolor.Text;
-
-            int ownerId;
-            InsertarOActualizarDueño(nombre, correo, apellido, telefono, direccion, out ownerId);
-            InsertarMascota(ownerId, nombreMascota, sexo, fechaNacimiento, especie, esterilizado, raza, edad, color);
-            LimpiarParametro();
-        }
-        private void InsertarOActualizarDueño(string nombre, string correo, string apellido, string telefono, string direccion, out int id_duenio)
-        {
-            try
+            string connectionString = "Server=localhost;Database=veterinaria;User ID=Jose;Password=perrito123;";
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
             {
-                connection.Open();
-                string query = "SELECT id FROM datosduenios WHERE correo = @correo";
-                MySqlCommand cmd = new MySqlCommand(query, connection);
-                cmd.Parameters.AddWithValue("@correo", correo);
-                var result = cmd.ExecuteScalar();
-
-                if (result != null)
+                try
                 {
-                    id_duenio = Convert.ToInt32(result);
-                    query = "UPDATE datosduenio SET nombre = @nombre, apellido = @apellido, telefono = @telefono, direccion = @direccion WHERE id = @id";
-                    cmd = new MySqlCommand(query, connection);
-                    cmd.Parameters.AddWithValue("@id", id_duenio);
+                    conn.Open();
+
+                    // Verificar si el dueño ya existe
+                    string selectDuenioQuery = @"SELECT id_duenio FROM datosduenio 
+                                                 WHERE nombre = @nombre AND apellido = @apellido AND correo = @correo LIMIT 1";
+
+                    MySqlCommand cmd = new MySqlCommand(selectDuenioQuery, conn);
+                    cmd.Parameters.AddWithValue("@nombre", txtnomDueño.Text);
+                    cmd.Parameters.AddWithValue("@apellido", txtapellido.Text);
+                    cmd.Parameters.AddWithValue("@correo", txtcorreo.Text);
+
+                    object result = cmd.ExecuteScalar();
+                    long duenioId;
+
+                    if (result != null)
+                    {
+                        // Si el dueño ya existe, obtener su id
+                        duenioId = Convert.ToInt64(result);
+                    }
+                    else
+                    {
+                        // Si el dueño no existe, insertarlo y obtener su id
+                        string insertDuenioQuery = @"INSERT INTO datosduenio (nombre, apellido, correo, direccion, telefono) 
+                                                     VALUES (@nombre, @apellido, @correo, @direccion, @telefono)";
+
+                        cmd = new MySqlCommand(insertDuenioQuery, conn);
+                        cmd.Parameters.AddWithValue("@nombre", txtnomDueño.Text);
+                        cmd.Parameters.AddWithValue("@apellido", txtapellido.Text);
+                        cmd.Parameters.AddWithValue("@correo", txtcorreo.Text);
+                        cmd.Parameters.AddWithValue("@direccion", txtdireccion.Text);
+                        cmd.Parameters.AddWithValue("@telefono", txtTelefono.Text);
+
+                        cmd.ExecuteNonQuery();
+                        duenioId = cmd.LastInsertedId;
+                    }
+
+                    // Determinar especie
+                    string especie = "";
+                    if (checkperro.Checked) especie = "Perro";
+                    else if (checkgato.Checked) especie = "Gato";
+                    else if (checkotro.Checked) especie = "Otros";
+
+                    // Determinar esterilizado
+                    bool esterilizado = checkEsi.Checked;
+
+                    // Inserción de la mascota para el dueño
+                    string insertMascotaQuery = @"INSERT INTO datosmascota (id_duenio, nombre, sexo, fecha_nacimiento, especie, esterilizado, raza, edad, color) 
+                                                  VALUES (@id_duenio, @nombre, @sexo, @fecha_nacimiento, @especie, @esterilizado, @raza, @edad, @color)";
+
+                    cmd = new MySqlCommand(insertMascotaQuery, conn);
+                    cmd.Parameters.AddWithValue("@id_duenio", duenioId);
+                    cmd.Parameters.AddWithValue("@nombre", txtnombreM.Text);
+                    cmd.Parameters.AddWithValue("@sexo", txtsexo.Text);
+                    cmd.Parameters.AddWithValue("@fecha_nacimiento", DateTime.Parse(fecha.Text));
+                    cmd.Parameters.AddWithValue("@especie", especie);
+                    cmd.Parameters.AddWithValue("@esterilizado", esterilizado);
+                    cmd.Parameters.AddWithValue("@raza", txtraza.Text);
+                    cmd.Parameters.AddWithValue("@edad", int.Parse(txtedad.Text));
+                    cmd.Parameters.AddWithValue("@color", txtcolor.Text);
+
+                    cmd.ExecuteNonQuery();
+
+                    MessageBox.Show("Datos insertados correctamente.");
+
+                    // Limpiar los campos después de la inserción
+                    LimpiarParametros();
                 }
-                else
+                catch (Exception ex)
                 {
-                    query = "INSERT INTO datosduenio (nombre, correo, apellido, telefono, direccion) VALUES (@nombre, @correo, @apellido, @telefono, @direccion)";
-                    cmd = new MySqlCommand(query, connection);
-                    id_duenio = (int)cmd.LastInsertedId;
+                    MessageBox.Show("Error: " + ex.Message);
                 }
+            }
 
-                cmd.Parameters.AddWithValue("@nombre", nombre);
-                cmd.Parameters.AddWithValue("@apellido", apellido);
-                cmd.Parameters.AddWithValue("@telefono", telefono);
-                cmd.Parameters.AddWithValue("@direccion", direccion);
-                cmd.ExecuteNonQuery();
-            }
-            finally
-            {
-                connection.Close();
-            }
-        }
 
-        private void InsertarMascota(int ownerId, string nombreMascota, string sexo, DateTime fechaNacimiento, string especie, bool esterilizado, string raza, int edad, string color)
-        {
-            try
-            {
-                connection.Open();
-                string query = "INSERT INTO datosmascota (ownerId, nombreMascota, sexo, fechaNacimiento, especie, esterilizado, raza, edad, color) " +
-                               "VALUES (@ownerId, @nombreMascota, @sexo, @fechaNacimiento, @especie, @esterilizado, @raza, @edad, @color)";
-                MySqlCommand cmd = new MySqlCommand(query, connection);
-                cmd.Parameters.AddWithValue("@ownerId", ownerId);
-                cmd.Parameters.AddWithValue("@nombreMascota", nombreMascota);
-                cmd.Parameters.AddWithValue("@sexo", sexo);
-                cmd.Parameters.AddWithValue("@fechaNacimiento", fechaNacimiento);
-                cmd.Parameters.AddWithValue("@especie", especie);
-                cmd.Parameters.AddWithValue("@esterilizado", esterilizado);
-                cmd.Parameters.AddWithValue("@raza", raza);
-                cmd.Parameters.AddWithValue("@edad", edad);
-                cmd.Parameters.AddWithValue("@color", color);
-                cmd.ExecuteNonQuery();
-            }
-            finally
-            {
-                connection.Close();
-            }
         }
-        public void LimpiarParametro() {
+    
+         public void LimpiarParametros() {
             // Resetear campos
             txtnomDueño.Clear();
             txtcorreo.Clear();
