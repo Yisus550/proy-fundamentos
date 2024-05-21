@@ -28,7 +28,7 @@ namespace borrador
 
         private void btnenviar_Click(object sender, EventArgs e)
         {
-            string connectionString = "Server=localhost;Database=veterinaria;User ID=Jose;Password=perrito123;";
+            string connectionString = "Server=localhost;Database=veterinaria;User=root;Password=;";
             using (MySqlConnection conn = new MySqlConnection(connectionString))
             {
                 try

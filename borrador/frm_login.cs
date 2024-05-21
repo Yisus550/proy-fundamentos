@@ -35,7 +35,7 @@ namespace borrador
 
         private void btningresar_Click_1(object sender, EventArgs e)
         {
-            string connectionString = "Server=localhost;Database=veterinaria;User ID=Jose;Password=perrito123;Pooling=false;";
+            string connectionString = "Server=localhost;Database=veterinaria;User=root;Password=;Pooling=false;";
             string username = txt_Usuario.Text;
             string password = txt_Contra.Text;
 
@@ -60,8 +60,8 @@ namespace borrador
                     {
                         MessageBox.Show("Iniciando Sesion");
                         // Aquí puedes abrir el siguiente formulario o realizar alguna acción
-                        frm_principal princi = new frm_principal();
-                        princi.Show();
+                        //frm_principal princi = new frm_principal();
+                        //princi.Show();
                     }
                     else
                     {
