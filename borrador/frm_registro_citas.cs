@@ -36,7 +36,7 @@ namespace borrador
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string connectionString = "Server=localhost;Database=veterinaria;User Id=Jose;Password=perrito123;"; // Asegúrate de cambiar los valores
+            string connectionString = "Server=localhost;Database=veterinaria;User Id=Jose;Password=perrito123;"; 
 
             string especie = rbt_perro.Checked ? "Perro" :
                              rbt_gato.Checked ? "Gato" :
@@ -47,7 +47,7 @@ namespace borrador
                 try
                 {
                     connection.Open();
-                    string query = "INSERT INTO citas (Medico, nombre_mascota, especie, raza, propietario, telefono, fecha, hora, sintomas) VALUES (@medico_atender, @nombre_mascota, @especie, @raza, @propietario, @telefono, @fecha, @hora, @sintomas)";
+                    string query = "INSERT INTO citas (Medico, nombre_mascota, especie, raza, propietario, telefono, fecha, hora, sintomas) VALUES (@Medico, @nombre_mascota, @especie, @raza, @propietario, @telefono, @fecha, @hora, @sintomas)";
 
                     using (MySqlCommand command = new MySqlCommand(query, connection))
                     {
@@ -64,15 +64,13 @@ namespace borrador
                         command.Parameters.AddWithValue("@sintomas", txt_sintomas.Text);
 
                         command.ExecuteNonQuery();
+
+                        // Limpiar los campos después de enviar
+                        LimpiarParametros();
+
                     }
-
-                    // Limpiar los campos después de enviar
-                    LimpiarParametros();
-
-
-                    MessageBox.Show("Cita registrada exitosamente.");
-                }
-                catch (Exception ex)
+                        MessageBox.Show("Cita registrada exitosamente.");
+                }catch (Exception ex)
                 {
                     MessageBox.Show("Error al registrar cita: " + ex.Message);
                 }
