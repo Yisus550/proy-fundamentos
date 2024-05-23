@@ -35,7 +35,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.txt_sintomas = new System.Windows.Forms.TextBox();
             this.textBox10 = new System.Windows.Forms.TextBox();
-            this.dateTime_hora = new System.Windows.Forms.DateTimePicker();
             this.dateTime_fecha = new System.Windows.Forms.DateTimePicker();
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
@@ -57,6 +56,7 @@
             this.nom = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btn_enviarPaciente = new System.Windows.Forms.Button();
+            this.cbx_Hora = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.huellas)).BeginInit();
@@ -117,9 +117,9 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.cbx_Hora);
             this.panel2.Controls.Add(this.txt_sintomas);
             this.panel2.Controls.Add(this.textBox10);
-            this.panel2.Controls.Add(this.dateTime_hora);
             this.panel2.Controls.Add(this.dateTime_fecha);
             this.panel2.Controls.Add(this.textBox8);
             this.panel2.Controls.Add(this.textBox6);
@@ -168,17 +168,6 @@
             this.textBox10.Size = new System.Drawing.Size(177, 28);
             this.textBox10.TabIndex = 121;
             this.textBox10.Text = "Sintomas";
-            // 
-            // dateTime_hora
-            // 
-            this.dateTime_hora.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.dateTime_hora.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTime_hora.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dateTime_hora.Location = new System.Drawing.Point(251, 423);
-            this.dateTime_hora.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dateTime_hora.Name = "dateTime_hora";
-            this.dateTime_hora.Size = new System.Drawing.Size(237, 30);
-            this.dateTime_hora.TabIndex = 120;
             // 
             // dateTime_fecha
             // 
@@ -450,6 +439,14 @@
             this.btn_enviarPaciente.UseVisualStyleBackColor = true;
             this.btn_enviarPaciente.Click += new System.EventHandler(this.button1_Click);
             // 
+            // cbx_Hora
+            // 
+            this.cbx_Hora.FormattingEnabled = true;
+            this.cbx_Hora.Location = new System.Drawing.Point(249, 431);
+            this.cbx_Hora.Name = "cbx_Hora";
+            this.cbx_Hora.Size = new System.Drawing.Size(231, 24);
+            this.cbx_Hora.TabIndex = 123;
+            // 
             // frm_registro_citas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -484,7 +481,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox txt_sintomas;
         private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.DateTimePicker dateTime_hora;
         private System.Windows.Forms.DateTimePicker dateTime_fecha;
         private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.TextBox textBox6;
@@ -506,5 +502,6 @@
         private System.Windows.Forms.TextBox nom;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button btn_enviarPaciente;
+        private System.Windows.Forms.ComboBox cbx_Hora;
     }
 }

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Data.SqlClient;
+using MySql.Data.MySqlClient;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Linq;
@@ -16,91 +16,68 @@ namespace borrador
     {
 
         //Aqui se llenan los parametros con la base de datos que creamos
-        private string connectionString = "Server=LPKM\\SQLEXPRESS      ;Database= prueba           ;Integrated Security=True;";
+
         public frm_registro_citas()
         {
             InitializeComponent();
+            IniciarHoraComboBox();
+        }
+
+        private void IniciarHoraComboBox()
+        {
+            for (int hora = 0; hora < 24; hora++)
+            {
+                for (int minuto = 0; minuto < 60; minuto += 30) // intervalos de 30 minutos
+                {
+                    cbx_Hora.Items.Add($"{hora:D2}:{minuto:D2}");
+                }
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            string connectionString = "Server=localhost;Database=veterinaria;User Id=Jose;Password=perrito123;"; // Asegúrate de cambiar los valores
 
-            //Parametros a ingresar
-            string doctor = cbx_medico.Text;
-            string mascota = txtnombreM.Text;
-            string especie = SeleccionarEspecie();
-            string raza = txtraza.Text;
-            string propietario = txt_propietario.Text;
-            string telefono = txt_telefono.Text;
-            DateTime fecha = dateTime_fecha.Value;
-            TimeSpan hora = dateTime_hora.Value.TimeOfDay;
-            string sintomas = txt_sintomas.Text;
+            string especie = rbt_perro.Checked ? "Perro" :
+                             rbt_gato.Checked ? "Gato" :
+                             rbt_otro.Checked ? txt_otro.Text : "";
 
-            // Validar entradas antes de guardar
-            if (ValidarEntradas(doctor, mascota, especie, propietario, telefono, sintomas))
+            using (MySqlConnection connection = new MySqlConnection(connectionString))
             {
-                EnviarCita(doctor, mascota, especie, raza, propietario, telefono, fecha, hora, sintomas);
-                LimpiarParametros();
-            }
-        }
-            private string SeleccionarEspecie()    //Metodo para el radiobutton
-        {
-            if (rbt_perro.Checked) return "Perro";
-                if (rbt_gato.Checked) return "Gato";
-                if (rbt_otro.Checked) return "Otro";
-                return string.Empty;
-            }
-
-
-        
-            private bool ValidarEntradas(string doctor, string mascota, string especie, string propietario, string telefono, string sintomas)
-            {
-                if (string.IsNullOrWhiteSpace(doctor) || string.IsNullOrWhiteSpace(mascota) || string.IsNullOrWhiteSpace(especie) ||   //No dejar campos vacios 
-                    string.IsNullOrWhiteSpace(propietario) || string.IsNullOrWhiteSpace(telefono) || string.IsNullOrWhiteSpace(sintomas))
+                try
                 {
-                    MessageBox.Show("Por favor complete todos los campos.");
-                    return false;
-                }
-                return true;
-            }
+                    connection.Open();
+                    string query = "INSERT INTO citas (Medico, nombre_mascota, especie, raza, propietario, telefono, fecha, hora, sintomas) VALUES (@medico_atender, @nombre_mascota, @especie, @raza, @propietario, @telefono, @fecha, @hora, @sintomas)";
 
-
-            private void EnviarCita(string doctor, string mascota, string especie, string raza, string propietario, string telefono, DateTime fecha, TimeSpan hora, string sintomas)
-            {
-            //Aqui se pone el nombre de la tabla que se creo en la base de datos
-                string query = "INSERT INTO RegistroCitas (Doctor, mascota, especie, raza, propietario, telefono, fecha, hora, sintomas) " +
-                               "VALUES (@Doctor,@mascota, @especie, @raza, @propietario, @telefono, @fecha, @hora, @sintomas)";
-
-                using (SqlConnection connection = new SqlConnection(connectionString))
-                {
-                    using (SqlCommand command = new SqlCommand(query, connection))
+                    using (MySqlCommand command = new MySqlCommand(query, connection))
                     {
 
-                    //Agregando parametros
-                        command.Parameters.AddWithValue("@Doctor", doctor);
-                        command.Parameters.AddWithValue("@mascota", mascota);
+                        //Enviar parametros
+                        command.Parameters.AddWithValue("@Medico", cbx_medico.Text);
+                        command.Parameters.AddWithValue("@nombre_mascota", txtnombreM.Text);
                         command.Parameters.AddWithValue("@especie", especie);
-                        command.Parameters.AddWithValue("@raza", raza);
-                        command.Parameters.AddWithValue("@propietario", propietario);
-                        command.Parameters.AddWithValue("@telefono", telefono);
-                        command.Parameters.AddWithValue("@fecha", fecha);
-                        command.Parameters.AddWithValue("@hora", hora);
-                        command.Parameters.AddWithValue("@sintomas", sintomas);
+                        command.Parameters.AddWithValue("@raza", txtraza.Text);
+                        command.Parameters.AddWithValue("@propietario", txt_propietario.Text);
+                        command.Parameters.AddWithValue("@telefono", txt_telefono.Text);
+                        command.Parameters.AddWithValue("@fecha", dateTime_fecha.Value.Date);
+                        command.Parameters.AddWithValue("@hora", cbx_Hora.Text);
+                        command.Parameters.AddWithValue("@sintomas", txt_sintomas.Text);
 
-                        try
-                        {
-                            connection.Open();
-                            command.ExecuteNonQuery();
-                            MessageBox.Show("Cita guardada exitosamente.");
-                        }
-                        catch (Exception ex)
-                        {
-                            MessageBox.Show("Ocurrió un error: " + ex.Message);
-                        }
+                        command.ExecuteNonQuery();
                     }
+
+                    // Limpiar los campos después de enviar
+                    LimpiarParametros();
+
+
+                    MessageBox.Show("Cita registrada exitosamente.");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al registrar cita: " + ex.Message);
                 }
             }
-
+        }
             private void LimpiarParametros()   //Limpiar campos despues de mandar cita
             {
                 cbx_medico.SelectedIndex = -1;
@@ -108,16 +85,17 @@ namespace borrador
                 rbt_perro.Checked = false;
                 rbt_gato.Checked = false;
                 rbt_otro.Checked = false;
+                txt_otro.Clear();
                 txtraza.Clear();
                 txt_propietario.Clear();
                 txt_telefono.Clear();
                 dateTime_fecha.Value = DateTime.Now;
-                dateTime_hora.Value = DateTime.Now;
+                cbx_Hora.SelectedIndex = -1;
                 txt_sintomas.Clear();
             }
-        }
+        
     }
-
+}
 
     
 

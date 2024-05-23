@@ -11,16 +11,17 @@ using System.Windows.Forms;
 
 namespace borrador
 {
+   
     public partial class frm_login : Form
     {
-   
+        private string NombreUsuario;
 
         private bool MostrarContraseña = false;
 
         public frm_login()
         {
             InitializeComponent();
-         
+
             // Establece el botón de previsualización
             btn_mostrarContra.Text = "Mostrar";
             // Asegura que la contraseña esté oculta al cargar el formulario
@@ -39,7 +40,16 @@ namespace borrador
             string username = txt_Usuario.Text;
             string password = txt_Contra.Text;
 
+
             ValidarUsuario(username, password, connectionString);
+        }
+
+        public void AgarrarUsuario(string usuario) {
+            this.NombreUsuario =usuario;
+        }
+        private string ObtenerNombreUsuario()
+        {
+            return NombreUsuario;
         }
 
         private void ValidarUsuario(string username, string password, string connectionString)
@@ -59,6 +69,8 @@ namespace borrador
                     if (userCount > 0)
                     {
                         MessageBox.Show("Iniciando Sesion");
+
+                        GuardarHoraEntrada(connection, username);
                         // Aquí puedes abrir el siguiente formulario o realizar alguna acción
                         frm_principal princi = new frm_principal();
                         princi.Show();
@@ -110,6 +122,18 @@ namespace borrador
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+        public static void GuardarHoraEntrada(MySqlConnection conexion, string nombreUsuario)
+        {
+            string consulta = "INSERT INTO registro_entrada_salidas (usuario, hora_entrada) VALUES (@usuario, @horaEntrada)";
+
+            using (MySqlCommand comando = new MySqlCommand(consulta, conexion))
+            {
+                comando.Parameters.AddWithValue("@usuario", nombreUsuario);
+                comando.Parameters.AddWithValue("@horaEntrada", DateTime.Now);
+                comando.ExecuteNonQuery();
+                Console.WriteLine("Hora de entrada registrada para " + nombreUsuario);
+            }
         }
     }
 }
