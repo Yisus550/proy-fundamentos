@@ -59,10 +59,10 @@ namespace borrador
                 try
                 {
                     connection.Open();
-                    string query = "SELECT COUNT(*) FROM usuarios WHERE nombre_usuario = @username AND contrasena = @password";
+                    string query = "SELECT COUNT(*) FROM usuarios WHERE nombre_usuario = @nombre_usuario AND contrasena = @contrasena";
                     MySqlCommand cmd = new MySqlCommand(query, connection);
-                    cmd.Parameters.AddWithValue("@username", username);
-                    cmd.Parameters.AddWithValue("@password", password);
+                    cmd.Parameters.AddWithValue("@nombre_usuario", username);
+                    cmd.Parameters.AddWithValue("@contrasena", password);
 
                     int userCount = Convert.ToInt32(cmd.ExecuteScalar());
 
