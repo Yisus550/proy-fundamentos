@@ -5,6 +5,11 @@ VisualStudioVersion = 17.9.34701.34
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "veterinaria", "borrador\veterinaria.csproj", "{A7E7DA7D-36A2-48E6-ACBB-FD73A5C70F03}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Base de datos", "Base de datos", "{43EEFE18-B48A-49D2-B354-EA04A34A97B1}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\..\Downloads\veterinaria (2).sql = ..\..\..\..\Downloads\veterinaria (2).sql
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
