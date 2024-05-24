@@ -13,7 +13,7 @@ namespace borrador
 {
     public partial class frm_registro_mascotas : Form  //"Server=LPKM\\SQLEXPRESS      ;Database= prueba    
     {
-        private MySqlConnection connection;
+      
         public frm_registro_mascotas()
         {
             InitializeComponent();
