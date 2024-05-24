@@ -125,12 +125,12 @@ namespace borrador
         }
         public static void GuardarHoraEntrada(MySqlConnection conexion, string nombreUsuario)
         {
-            string consulta = "INSERT INTO registro_entrada_salidas (usuario, hora_entrada) VALUES (@usuario, @horaEntrada)";
+            string consulta = "INSERT INTO registro_entradas_salidas (usuario, fecha_entrada) VALUES (@usuario, @fecha_entrada)";
 
             using (MySqlCommand comando = new MySqlCommand(consulta, conexion))
             {
                 comando.Parameters.AddWithValue("@usuario", nombreUsuario);
-                comando.Parameters.AddWithValue("@horaEntrada", DateTime.Now);
+                comando.Parameters.AddWithValue("@fecha_entrada", DateTime.Now);
                 comando.ExecuteNonQuery();
                 Console.WriteLine("Hora de entrada registrada para " + nombreUsuario);
             }

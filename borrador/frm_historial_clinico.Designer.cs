@@ -31,9 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_historial_clinico));
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.rbt_otro = new System.Windows.Forms.RadioButton();
+            this.rbt_gato = new System.Windows.Forms.RadioButton();
+            this.rbt_perro = new System.Windows.Forms.RadioButton();
             this.logotipo = new System.Windows.Forms.PictureBox();
             this.txtotro = new System.Windows.Forms.TextBox();
             this.txtedad = new System.Windows.Forms.TextBox();
@@ -86,26 +86,26 @@
             this.textBox23 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.textBox24 = new System.Windows.Forms.TextBox();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.fecha_aplicacion = new System.Windows.Forms.DateTimePicker();
             this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txt_tipoDesparasitante = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.dateTimePicker4 = new System.Windows.Forms.DateTimePicker();
+            this.fecha_accidente = new System.Windows.Forms.DateTimePicker();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.radioButton10 = new System.Windows.Forms.RadioButton();
-            this.radioButton11 = new System.Windows.Forms.RadioButton();
+            this.rbt_no = new System.Windows.Forms.RadioButton();
+            this.rbt_si = new System.Windows.Forms.RadioButton();
             this.textBox19 = new System.Windows.Forms.TextBox();
-            this.textBox20 = new System.Windows.Forms.TextBox();
+            this.txt_especifique = new System.Windows.Forms.TextBox();
             this.textBox21 = new System.Windows.Forms.TextBox();
             this.textBox18 = new System.Windows.Forms.TextBox();
-            this.textBox16 = new System.Windows.Forms.TextBox();
+            this.txt_descripcion = new System.Windows.Forms.TextBox();
             this.textBox17 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.fechaAplicacion = new System.Windows.Forms.DateTimePicker();
             this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt_vacuna = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
@@ -208,17 +208,17 @@
             this.panel1.Controls.Add(this.huellas);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1519, 198);
+            this.panel1.Size = new System.Drawing.Size(1523, 198);
             this.panel1.TabIndex = 175;
             // 
             // groupBox1
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.groupBox1.Controls.Add(this.radioButton3);
-            this.groupBox1.Controls.Add(this.radioButton2);
-            this.groupBox1.Controls.Add(this.radioButton1);
+            this.groupBox1.Controls.Add(this.rbt_otro);
+            this.groupBox1.Controls.Add(this.rbt_gato);
+            this.groupBox1.Controls.Add(this.rbt_perro);
             this.groupBox1.Font = new System.Drawing.Font("Comic Sans MS", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(158)))), ((int)(((byte)(162)))));
             this.groupBox1.Location = new System.Drawing.Point(504, 53);
@@ -229,47 +229,47 @@
             this.groupBox1.TabIndex = 192;
             this.groupBox1.TabStop = false;
             // 
-            // radioButton3
+            // rbt_otro
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(165, 16);
-            this.radioButton3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(71, 28);
-            this.radioButton3.TabIndex = 2;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Otro";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.rbt_otro.AutoSize = true;
+            this.rbt_otro.Location = new System.Drawing.Point(165, 16);
+            this.rbt_otro.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rbt_otro.Name = "rbt_otro";
+            this.rbt_otro.Size = new System.Drawing.Size(61, 24);
+            this.rbt_otro.TabIndex = 2;
+            this.rbt_otro.TabStop = true;
+            this.rbt_otro.Text = "Otro";
+            this.rbt_otro.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // rbt_gato
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(91, 16);
-            this.radioButton2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(69, 28);
-            this.radioButton2.TabIndex = 1;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Gato";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.rbt_gato.AutoSize = true;
+            this.rbt_gato.Location = new System.Drawing.Point(91, 16);
+            this.rbt_gato.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rbt_gato.Name = "rbt_gato";
+            this.rbt_gato.Size = new System.Drawing.Size(60, 24);
+            this.rbt_gato.TabIndex = 1;
+            this.rbt_gato.TabStop = true;
+            this.rbt_gato.Text = "Gato";
+            this.rbt_gato.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // rbt_perro
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(7, 16);
-            this.radioButton1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(77, 28);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Perro";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.rbt_perro.AutoSize = true;
+            this.rbt_perro.Location = new System.Drawing.Point(7, 16);
+            this.rbt_perro.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rbt_perro.Name = "rbt_perro";
+            this.rbt_perro.Size = new System.Drawing.Size(65, 24);
+            this.rbt_perro.TabIndex = 0;
+            this.rbt_perro.TabStop = true;
+            this.rbt_perro.Text = "Perro";
+            this.rbt_perro.UseVisualStyleBackColor = true;
             // 
             // logotipo
             // 
             this.logotipo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.logotipo.Image = ((System.Drawing.Image)(resources.GetObject("logotipo.Image")));
-            this.logotipo.Location = new System.Drawing.Point(1250, 14);
+            this.logotipo.Location = new System.Drawing.Point(1271, 14);
             this.logotipo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.logotipo.Name = "logotipo";
             this.logotipo.Size = new System.Drawing.Size(255, 153);
@@ -285,7 +285,7 @@
             this.txtotro.Location = new System.Drawing.Point(837, 71);
             this.txtotro.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtotro.Name = "txtotro";
-            this.txtotro.Size = new System.Drawing.Size(241, 31);
+            this.txtotro.Size = new System.Drawing.Size(241, 26);
             this.txtotro.TabIndex = 190;
             // 
             // txtedad
@@ -296,7 +296,7 @@
             this.txtedad.Location = new System.Drawing.Point(495, 162);
             this.txtedad.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtedad.Name = "txtedad";
-            this.txtedad.Size = new System.Drawing.Size(241, 31);
+            this.txtedad.Size = new System.Drawing.Size(241, 26);
             this.txtedad.TabIndex = 189;
             // 
             // txtcolor
@@ -307,7 +307,7 @@
             this.txtcolor.Location = new System.Drawing.Point(839, 162);
             this.txtcolor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtcolor.Name = "txtcolor";
-            this.txtcolor.Size = new System.Drawing.Size(241, 31);
+            this.txtcolor.Size = new System.Drawing.Size(241, 26);
             this.txtcolor.TabIndex = 188;
             // 
             // edad
@@ -320,7 +320,7 @@
             this.edad.Location = new System.Drawing.Point(404, 164);
             this.edad.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.edad.Name = "edad";
-            this.edad.Size = new System.Drawing.Size(105, 24);
+            this.edad.Size = new System.Drawing.Size(105, 19);
             this.edad.TabIndex = 187;
             this.edad.Text = "Edad:";
             // 
@@ -334,7 +334,7 @@
             this.color.Location = new System.Drawing.Point(751, 162);
             this.color.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.color.Name = "color";
-            this.color.Size = new System.Drawing.Size(81, 24);
+            this.color.Size = new System.Drawing.Size(81, 19);
             this.color.TabIndex = 186;
             this.color.Text = "Color:";
             // 
@@ -346,7 +346,7 @@
             this.fecha.Location = new System.Drawing.Point(187, 162);
             this.fecha.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.fecha.Name = "fecha";
-            this.fecha.Size = new System.Drawing.Size(151, 27);
+            this.fecha.Size = new System.Drawing.Size(151, 23);
             this.fecha.TabIndex = 185;
             // 
             // fechanacimiento
@@ -359,7 +359,7 @@
             this.fechanacimiento.Location = new System.Drawing.Point(8, 164);
             this.fechanacimiento.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.fechanacimiento.Name = "fechanacimiento";
-            this.fechanacimiento.Size = new System.Drawing.Size(181, 24);
+            this.fechanacimiento.Size = new System.Drawing.Size(181, 19);
             this.fechanacimiento.TabIndex = 184;
             this.fechanacimiento.Text = "Fecha de nacimiento:";
             // 
@@ -371,7 +371,7 @@
             this.txtraza.Location = new System.Drawing.Point(839, 116);
             this.txtraza.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtraza.Name = "txtraza";
-            this.txtraza.Size = new System.Drawing.Size(241, 31);
+            this.txtraza.Size = new System.Drawing.Size(241, 26);
             this.txtraza.TabIndex = 183;
             // 
             // raza
@@ -384,7 +384,7 @@
             this.raza.Location = new System.Drawing.Point(751, 114);
             this.raza.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.raza.Name = "raza";
-            this.raza.Size = new System.Drawing.Size(81, 24);
+            this.raza.Size = new System.Drawing.Size(81, 19);
             this.raza.TabIndex = 182;
             this.raza.Text = "Raza:";
             // 
@@ -394,10 +394,10 @@
             this.checkEno.AutoSize = true;
             this.checkEno.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkEno.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(158)))), ((int)(((byte)(162)))));
-            this.checkEno.Location = new System.Drawing.Point(629, 116);
+            this.checkEno.Location = new System.Drawing.Point(629, 121);
             this.checkEno.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkEno.Name = "checkEno";
-            this.checkEno.Size = new System.Drawing.Size(56, 28);
+            this.checkEno.Size = new System.Drawing.Size(46, 23);
             this.checkEno.TabIndex = 181;
             this.checkEno.Text = "No";
             this.checkEno.UseVisualStyleBackColor = true;
@@ -408,10 +408,10 @@
             this.checkEsi.AutoSize = true;
             this.checkEsi.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkEsi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(158)))), ((int)(((byte)(162)))));
-            this.checkEsi.Location = new System.Drawing.Point(512, 116);
+            this.checkEsi.Location = new System.Drawing.Point(512, 121);
             this.checkEsi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkEsi.Name = "checkEsi";
-            this.checkEsi.Size = new System.Drawing.Size(48, 28);
+            this.checkEsi.Size = new System.Drawing.Size(42, 23);
             this.checkEsi.TabIndex = 180;
             this.checkEsi.Text = "Si";
             this.checkEsi.UseVisualStyleBackColor = true;
@@ -426,7 +426,7 @@
             this.esterilizado.Location = new System.Drawing.Point(404, 116);
             this.esterilizado.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.esterilizado.Name = "esterilizado";
-            this.esterilizado.Size = new System.Drawing.Size(105, 24);
+            this.esterilizado.Size = new System.Drawing.Size(105, 19);
             this.esterilizado.TabIndex = 179;
             this.esterilizado.Text = "Esterilizado:";
             // 
@@ -438,7 +438,7 @@
             this.txtsexo.Location = new System.Drawing.Point(95, 116);
             this.txtsexo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtsexo.Name = "txtsexo";
-            this.txtsexo.Size = new System.Drawing.Size(241, 31);
+            this.txtsexo.Size = new System.Drawing.Size(241, 26);
             this.txtsexo.TabIndex = 178;
             // 
             // sexo
@@ -451,7 +451,7 @@
             this.sexo.Location = new System.Drawing.Point(8, 116);
             this.sexo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.sexo.Name = "sexo";
-            this.sexo.Size = new System.Drawing.Size(81, 24);
+            this.sexo.Size = new System.Drawing.Size(81, 19);
             this.sexo.TabIndex = 177;
             this.sexo.Text = "Sexo:";
             // 
@@ -465,7 +465,7 @@
             this.especie.Location = new System.Drawing.Point(404, 71);
             this.especie.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.especie.Name = "especie";
-            this.especie.Size = new System.Drawing.Size(105, 24);
+            this.especie.Size = new System.Drawing.Size(105, 19);
             this.especie.TabIndex = 176;
             this.especie.Text = "Especie:";
             // 
@@ -477,7 +477,7 @@
             this.txtnombreM.Location = new System.Drawing.Point(95, 71);
             this.txtnombreM.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtnombreM.Name = "txtnombreM";
-            this.txtnombreM.Size = new System.Drawing.Size(241, 31);
+            this.txtnombreM.Size = new System.Drawing.Size(241, 26);
             this.txtnombreM.TabIndex = 175;
             // 
             // nom
@@ -490,7 +490,7 @@
             this.nom.Location = new System.Drawing.Point(8, 71);
             this.nom.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.nom.Name = "nom";
-            this.nom.Size = new System.Drawing.Size(81, 24);
+            this.nom.Size = new System.Drawing.Size(81, 19);
             this.nom.TabIndex = 174;
             this.nom.Text = "Nombre:";
             // 
@@ -503,7 +503,7 @@
             this.txtdatosMascotas.Location = new System.Drawing.Point(69, 25);
             this.txtdatosMascotas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtdatosMascotas.Name = "txtdatosMascotas";
-            this.txtdatosMascotas.Size = new System.Drawing.Size(227, 28);
+            this.txtdatosMascotas.Size = new System.Drawing.Size(227, 23);
             this.txtdatosMascotas.TabIndex = 173;
             this.txtdatosMascotas.Text = "Datos de la Mascota";
             // 
@@ -524,9 +524,9 @@
             this.panel2.Controls.Add(this.label1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 198);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1519, 66);
+            this.panel2.Size = new System.Drawing.Size(1523, 66);
             this.panel2.TabIndex = 176;
             // 
             // pictureBox1
@@ -547,7 +547,7 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(160)))), ((int)(((byte)(176)))));
             this.label1.Location = new System.Drawing.Point(68, 20);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(173, 29);
+            this.label1.Size = new System.Drawing.Size(134, 23);
             this.label1.TabIndex = 79;
             this.label1.Text = "Historial Medico";
             // 
@@ -559,9 +559,9 @@
             this.panel3.Controls.Add(this.panel4);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 264);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1519, 364);
+            this.panel3.Size = new System.Drawing.Size(1523, 364);
             this.panel3.TabIndex = 177;
             // 
             // panel7
@@ -577,7 +577,7 @@
             this.panel7.Controls.Add(this.textBox12);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel7.Location = new System.Drawing.Point(1164, 0);
-            this.panel7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel7.Margin = new System.Windows.Forms.Padding(4);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(375, 364);
             this.panel7.TabIndex = 215;
@@ -604,7 +604,7 @@
             this.radioButton4.Location = new System.Drawing.Point(73, 16);
             this.radioButton4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(54, 28);
+            this.radioButton4.Size = new System.Drawing.Size(47, 24);
             this.radioButton4.TabIndex = 1;
             this.radioButton4.TabStop = true;
             this.radioButton4.Text = "No";
@@ -616,7 +616,7 @@
             this.radioButton7.Location = new System.Drawing.Point(7, 16);
             this.radioButton7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioButton7.Name = "radioButton7";
-            this.radioButton7.Size = new System.Drawing.Size(47, 28);
+            this.radioButton7.Size = new System.Drawing.Size(41, 24);
             this.radioButton7.TabIndex = 0;
             this.radioButton7.TabStop = true;
             this.radioButton7.Text = "Si";
@@ -631,7 +631,7 @@
             this.textBox15.Location = new System.Drawing.Point(121, 180);
             this.textBox15.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(231, 31);
+            this.textBox15.Size = new System.Drawing.Size(231, 26);
             this.textBox15.TabIndex = 217;
             // 
             // textBox14
@@ -645,7 +645,7 @@
             this.textBox14.Location = new System.Drawing.Point(11, 180);
             this.textBox14.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(124, 24);
+            this.textBox14.Size = new System.Drawing.Size(124, 19);
             this.textBox14.TabIndex = 216;
             this.textBox14.Text = "Cirujano:";
             // 
@@ -658,7 +658,7 @@
             this.dateTimePicker3.Location = new System.Drawing.Point(189, 94);
             this.dateTimePicker3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dateTimePicker3.Name = "dateTimePicker3";
-            this.dateTimePicker3.Size = new System.Drawing.Size(169, 27);
+            this.dateTimePicker3.Size = new System.Drawing.Size(169, 23);
             this.dateTimePicker3.TabIndex = 215;
             // 
             // textBox13
@@ -672,7 +672,7 @@
             this.textBox13.Location = new System.Drawing.Point(11, 96);
             this.textBox13.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(200, 24);
+            this.textBox13.Size = new System.Drawing.Size(200, 19);
             this.textBox13.TabIndex = 214;
             this.textBox13.Text = "Fecha de la cirugia:";
             // 
@@ -687,7 +687,7 @@
             this.textBox10.Location = new System.Drawing.Point(11, 134);
             this.textBox10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(124, 24);
+            this.textBox10.Size = new System.Drawing.Size(124, 19);
             this.textBox10.TabIndex = 213;
             this.textBox10.Text = "Especifique:";
             // 
@@ -700,7 +700,7 @@
             this.textBox11.Location = new System.Drawing.Point(121, 132);
             this.textBox11.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(231, 31);
+            this.textBox11.Size = new System.Drawing.Size(231, 26);
             this.textBox11.TabIndex = 212;
             // 
             // label5
@@ -712,7 +712,7 @@
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(215)))), ((int)(((byte)(223)))));
             this.label5.Location = new System.Drawing.Point(7, 16);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(80, 25);
+            this.label5.Size = new System.Drawing.Size(65, 21);
             this.label5.TabIndex = 211;
             this.label5.Text = "Cirugias";
             // 
@@ -727,7 +727,7 @@
             this.textBox12.Location = new System.Drawing.Point(11, 55);
             this.textBox12.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(199, 24);
+            this.textBox12.Size = new System.Drawing.Size(199, 19);
             this.textBox12.TabIndex = 210;
             this.textBox12.Text = "Tiene alguna cirugia:";
             // 
@@ -740,7 +740,7 @@
             this.panel6.Controls.Add(this.textBox7);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel6.Location = new System.Drawing.Point(787, 0);
-            this.panel6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel6.Margin = new System.Windows.Forms.Padding(4);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(377, 364);
             this.panel6.TabIndex = 213;
@@ -767,7 +767,7 @@
             this.radioButton5.Location = new System.Drawing.Point(73, 16);
             this.radioButton5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioButton5.Name = "radioButton5";
-            this.radioButton5.Size = new System.Drawing.Size(54, 28);
+            this.radioButton5.Size = new System.Drawing.Size(47, 24);
             this.radioButton5.TabIndex = 1;
             this.radioButton5.TabStop = true;
             this.radioButton5.Text = "No";
@@ -779,7 +779,7 @@
             this.radioButton6.Location = new System.Drawing.Point(7, 16);
             this.radioButton6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioButton6.Name = "radioButton6";
-            this.radioButton6.Size = new System.Drawing.Size(47, 28);
+            this.radioButton6.Size = new System.Drawing.Size(41, 24);
             this.radioButton6.TabIndex = 0;
             this.radioButton6.TabStop = true;
             this.radioButton6.Text = "Si";
@@ -796,7 +796,7 @@
             this.textBox9.Location = new System.Drawing.Point(12, 91);
             this.textBox9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(163, 24);
+            this.textBox9.Size = new System.Drawing.Size(163, 19);
             this.textBox9.TabIndex = 212;
             this.textBox9.Text = "Especifique:";
             // 
@@ -809,7 +809,7 @@
             this.textBox8.Location = new System.Drawing.Point(123, 89);
             this.textBox8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(220, 31);
+            this.textBox8.Size = new System.Drawing.Size(220, 26);
             this.textBox8.TabIndex = 211;
             // 
             // label4
@@ -821,7 +821,7 @@
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(215)))), ((int)(((byte)(223)))));
             this.label4.Location = new System.Drawing.Point(7, 16);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(83, 25);
+            this.label4.Size = new System.Drawing.Size(67, 21);
             this.label4.TabIndex = 210;
             this.label4.Text = "Alergias";
             // 
@@ -836,7 +836,7 @@
             this.textBox7.Location = new System.Drawing.Point(12, 55);
             this.textBox7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(145, 24);
+            this.textBox7.Size = new System.Drawing.Size(145, 19);
             this.textBox7.TabIndex = 209;
             this.textBox7.Text = "Alergias:";
             // 
@@ -847,14 +847,14 @@
             this.panel5.Controls.Add(this.textBox23);
             this.panel5.Controls.Add(this.label7);
             this.panel5.Controls.Add(this.textBox24);
-            this.panel5.Controls.Add(this.dateTimePicker2);
+            this.panel5.Controls.Add(this.fecha_aplicacion);
             this.panel5.Controls.Add(this.textBox6);
-            this.panel5.Controls.Add(this.textBox3);
+            this.panel5.Controls.Add(this.txt_tipoDesparasitante);
             this.panel5.Controls.Add(this.textBox4);
             this.panel5.Controls.Add(this.label3);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel5.Location = new System.Drawing.Point(412, 0);
-            this.panel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel5.Margin = new System.Windows.Forms.Padding(4);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(375, 364);
             this.panel5.TabIndex = 212;
@@ -881,7 +881,7 @@
             this.radioButton8.Location = new System.Drawing.Point(73, 16);
             this.radioButton8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioButton8.Name = "radioButton8";
-            this.radioButton8.Size = new System.Drawing.Size(54, 28);
+            this.radioButton8.Size = new System.Drawing.Size(47, 24);
             this.radioButton8.TabIndex = 1;
             this.radioButton8.TabStop = true;
             this.radioButton8.Text = "No";
@@ -893,7 +893,7 @@
             this.radioButton9.Location = new System.Drawing.Point(7, 16);
             this.radioButton9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioButton9.Name = "radioButton9";
-            this.radioButton9.Size = new System.Drawing.Size(47, 28);
+            this.radioButton9.Size = new System.Drawing.Size(41, 24);
             this.radioButton9.TabIndex = 0;
             this.radioButton9.TabStop = true;
             this.radioButton9.Text = "Si";
@@ -910,7 +910,7 @@
             this.textBox22.Location = new System.Drawing.Point(12, 229);
             this.textBox22.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox22.Name = "textBox22";
-            this.textBox22.Size = new System.Drawing.Size(105, 24);
+            this.textBox22.Size = new System.Drawing.Size(105, 19);
             this.textBox22.TabIndex = 219;
             this.textBox22.Text = "Especifique:";
             // 
@@ -923,7 +923,7 @@
             this.textBox23.Location = new System.Drawing.Point(123, 225);
             this.textBox23.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox23.Name = "textBox23";
-            this.textBox23.Size = new System.Drawing.Size(219, 31);
+            this.textBox23.Size = new System.Drawing.Size(219, 26);
             this.textBox23.TabIndex = 218;
             // 
             // label7
@@ -935,7 +935,7 @@
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(215)))), ((int)(((byte)(223)))));
             this.label7.Location = new System.Drawing.Point(7, 154);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(236, 25);
+            this.label7.Size = new System.Drawing.Size(197, 21);
             this.label7.TabIndex = 217;
             this.label7.Text = "Medicamentos o vitaminas";
             // 
@@ -950,21 +950,21 @@
             this.textBox24.Location = new System.Drawing.Point(8, 192);
             this.textBox24.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox24.Name = "textBox24";
-            this.textBox24.Size = new System.Drawing.Size(229, 24);
+            this.textBox24.Size = new System.Drawing.Size(229, 19);
             this.textBox24.TabIndex = 216;
             this.textBox24.Text = "Toma algun medicamento:";
             // 
-            // dateTimePicker2
+            // fecha_aplicacion
             // 
-            this.dateTimePicker2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.fecha_aplicacion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dateTimePicker2.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(191, 105);
-            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(151, 27);
-            this.dateTimePicker2.TabIndex = 215;
+            this.fecha_aplicacion.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fecha_aplicacion.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.fecha_aplicacion.Location = new System.Drawing.Point(191, 105);
+            this.fecha_aplicacion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.fecha_aplicacion.Name = "fecha_aplicacion";
+            this.fecha_aplicacion.Size = new System.Drawing.Size(151, 23);
+            this.fecha_aplicacion.TabIndex = 215;
             // 
             // textBox6
             // 
@@ -977,21 +977,21 @@
             this.textBox6.Location = new System.Drawing.Point(12, 107);
             this.textBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(181, 24);
+            this.textBox6.Size = new System.Drawing.Size(181, 19);
             this.textBox6.TabIndex = 214;
             this.textBox6.Text = "Fecha de aplicacion:";
             // 
-            // textBox3
+            // txt_tipoDesparasitante
             // 
-            this.textBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txt_tipoDesparasitante.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(248)))), ((int)(((byte)(247)))));
-            this.textBox3.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(99, 55);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(241, 31);
-            this.textBox3.TabIndex = 213;
+            this.txt_tipoDesparasitante.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(248)))), ((int)(((byte)(247)))));
+            this.txt_tipoDesparasitante.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_tipoDesparasitante.Location = new System.Drawing.Point(99, 55);
+            this.txt_tipoDesparasitante.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_tipoDesparasitante.Name = "txt_tipoDesparasitante";
+            this.txt_tipoDesparasitante.Size = new System.Drawing.Size(241, 26);
+            this.txt_tipoDesparasitante.TabIndex = 213;
             // 
             // textBox4
             // 
@@ -1004,7 +1004,7 @@
             this.textBox4.Location = new System.Drawing.Point(12, 55);
             this.textBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(81, 24);
+            this.textBox4.Size = new System.Drawing.Size(81, 19);
             this.textBox4.TabIndex = 212;
             this.textBox4.Text = "Tipo:";
             // 
@@ -1017,51 +1017,51 @@
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(215)))), ((int)(((byte)(223)))));
             this.label3.Location = new System.Drawing.Point(7, 16);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(151, 25);
+            this.label3.Size = new System.Drawing.Size(123, 21);
             this.label3.TabIndex = 211;
             this.label3.Text = "Desparasitantes";
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.dateTimePicker4);
+            this.panel4.Controls.Add(this.fecha_accidente);
             this.panel4.Controls.Add(this.groupBox5);
             this.panel4.Controls.Add(this.textBox19);
-            this.panel4.Controls.Add(this.textBox20);
+            this.panel4.Controls.Add(this.txt_especifique);
             this.panel4.Controls.Add(this.textBox21);
             this.panel4.Controls.Add(this.textBox18);
-            this.panel4.Controls.Add(this.textBox16);
+            this.panel4.Controls.Add(this.txt_descripcion);
             this.panel4.Controls.Add(this.textBox17);
             this.panel4.Controls.Add(this.label6);
-            this.panel4.Controls.Add(this.dateTimePicker1);
+            this.panel4.Controls.Add(this.fechaAplicacion);
             this.panel4.Controls.Add(this.textBox5);
-            this.panel4.Controls.Add(this.textBox1);
+            this.panel4.Controls.Add(this.txt_vacuna);
             this.panel4.Controls.Add(this.textBox2);
             this.panel4.Controls.Add(this.label2);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel4.Location = new System.Drawing.Point(0, 0);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(412, 364);
             this.panel4.TabIndex = 211;
             // 
-            // dateTimePicker4
+            // fecha_accidente
             // 
-            this.dateTimePicker4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.fecha_accidente.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dateTimePicker4.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker4.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker4.Location = new System.Drawing.Point(221, 236);
-            this.dateTimePicker4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dateTimePicker4.Name = "dateTimePicker4";
-            this.dateTimePicker4.Size = new System.Drawing.Size(151, 27);
-            this.dateTimePicker4.TabIndex = 221;
+            this.fecha_accidente.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fecha_accidente.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.fecha_accidente.Location = new System.Drawing.Point(221, 236);
+            this.fecha_accidente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.fecha_accidente.Name = "fecha_accidente";
+            this.fecha_accidente.Size = new System.Drawing.Size(151, 23);
+            this.fecha_accidente.TabIndex = 221;
             // 
             // groupBox5
             // 
             this.groupBox5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox5.Controls.Add(this.radioButton10);
-            this.groupBox5.Controls.Add(this.radioButton11);
+            this.groupBox5.Controls.Add(this.rbt_no);
+            this.groupBox5.Controls.Add(this.rbt_si);
             this.groupBox5.Font = new System.Drawing.Font("Comic Sans MS", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(158)))), ((int)(((byte)(162)))));
             this.groupBox5.Location = new System.Drawing.Point(220, 260);
@@ -1072,29 +1072,29 @@
             this.groupBox5.TabIndex = 225;
             this.groupBox5.TabStop = false;
             // 
-            // radioButton10
+            // rbt_no
             // 
-            this.radioButton10.AutoSize = true;
-            this.radioButton10.Location = new System.Drawing.Point(73, 16);
-            this.radioButton10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.radioButton10.Name = "radioButton10";
-            this.radioButton10.Size = new System.Drawing.Size(54, 28);
-            this.radioButton10.TabIndex = 1;
-            this.radioButton10.TabStop = true;
-            this.radioButton10.Text = "No";
-            this.radioButton10.UseVisualStyleBackColor = true;
+            this.rbt_no.AutoSize = true;
+            this.rbt_no.Location = new System.Drawing.Point(73, 16);
+            this.rbt_no.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rbt_no.Name = "rbt_no";
+            this.rbt_no.Size = new System.Drawing.Size(47, 24);
+            this.rbt_no.TabIndex = 1;
+            this.rbt_no.TabStop = true;
+            this.rbt_no.Text = "No";
+            this.rbt_no.UseVisualStyleBackColor = true;
             // 
-            // radioButton11
+            // rbt_si
             // 
-            this.radioButton11.AutoSize = true;
-            this.radioButton11.Location = new System.Drawing.Point(7, 16);
-            this.radioButton11.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.radioButton11.Name = "radioButton11";
-            this.radioButton11.Size = new System.Drawing.Size(47, 28);
-            this.radioButton11.TabIndex = 0;
-            this.radioButton11.TabStop = true;
-            this.radioButton11.Text = "Si";
-            this.radioButton11.UseVisualStyleBackColor = true;
+            this.rbt_si.AutoSize = true;
+            this.rbt_si.Location = new System.Drawing.Point(7, 16);
+            this.rbt_si.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rbt_si.Name = "rbt_si";
+            this.rbt_si.Size = new System.Drawing.Size(41, 24);
+            this.rbt_si.TabIndex = 0;
+            this.rbt_si.TabStop = true;
+            this.rbt_si.Text = "Si";
+            this.rbt_si.UseVisualStyleBackColor = true;
             // 
             // textBox19
             // 
@@ -1107,21 +1107,21 @@
             this.textBox19.Location = new System.Drawing.Point(39, 314);
             this.textBox19.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox19.Name = "textBox19";
-            this.textBox19.Size = new System.Drawing.Size(105, 24);
+            this.textBox19.Size = new System.Drawing.Size(105, 19);
             this.textBox19.TabIndex = 224;
             this.textBox19.Text = "Especifique:";
             // 
-            // textBox20
+            // txt_especifique
             // 
-            this.textBox20.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txt_especifique.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(248)))), ((int)(((byte)(247)))));
-            this.textBox20.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox20.Location = new System.Drawing.Point(149, 310);
-            this.textBox20.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox20.Name = "textBox20";
-            this.textBox20.Size = new System.Drawing.Size(219, 31);
-            this.textBox20.TabIndex = 223;
+            this.txt_especifique.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(248)))), ((int)(((byte)(247)))));
+            this.txt_especifique.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_especifique.Location = new System.Drawing.Point(149, 310);
+            this.txt_especifique.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_especifique.Name = "txt_especifique";
+            this.txt_especifique.Size = new System.Drawing.Size(219, 26);
+            this.txt_especifique.TabIndex = 223;
             // 
             // textBox21
             // 
@@ -1134,7 +1134,7 @@
             this.textBox21.Location = new System.Drawing.Point(39, 278);
             this.textBox21.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox21.Name = "textBox21";
-            this.textBox21.Size = new System.Drawing.Size(176, 24);
+            this.textBox21.Size = new System.Drawing.Size(176, 19);
             this.textBox21.TabIndex = 222;
             this.textBox21.Text = "Recibio tratamiento:";
             // 
@@ -1149,21 +1149,21 @@
             this.textBox18.Location = new System.Drawing.Point(43, 239);
             this.textBox18.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox18.Name = "textBox18";
-            this.textBox18.Size = new System.Drawing.Size(181, 24);
+            this.textBox18.Size = new System.Drawing.Size(181, 19);
             this.textBox18.TabIndex = 220;
             this.textBox18.Text = "Fecha del accidente:";
             // 
-            // textBox16
+            // txt_descripcion
             // 
-            this.textBox16.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txt_descripcion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(248)))), ((int)(((byte)(247)))));
-            this.textBox16.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox16.Location = new System.Drawing.Point(149, 192);
-            this.textBox16.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(212, 31);
-            this.textBox16.TabIndex = 219;
+            this.txt_descripcion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(248)))), ((int)(((byte)(247)))));
+            this.txt_descripcion.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_descripcion.Location = new System.Drawing.Point(149, 192);
+            this.txt_descripcion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_descripcion.Name = "txt_descripcion";
+            this.txt_descripcion.Size = new System.Drawing.Size(212, 26);
+            this.txt_descripcion.TabIndex = 219;
             // 
             // textBox17
             // 
@@ -1176,7 +1176,7 @@
             this.textBox17.Location = new System.Drawing.Point(43, 192);
             this.textBox17.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new System.Drawing.Size(101, 24);
+            this.textBox17.Size = new System.Drawing.Size(101, 19);
             this.textBox17.TabIndex = 218;
             this.textBox17.Text = "Descripcion:";
             // 
@@ -1189,21 +1189,21 @@
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(215)))), ((int)(((byte)(223)))));
             this.label6.Location = new System.Drawing.Point(37, 154);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(199, 25);
+            this.label6.Size = new System.Drawing.Size(167, 21);
             this.label6.TabIndex = 217;
             this.label6.Text = "Accidentes o traumas";
             // 
-            // dateTimePicker1
+            // fechaAplicacion
             // 
-            this.dateTimePicker1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.fechaAplicacion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dateTimePicker1.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(220, 107);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(143, 27);
-            this.dateTimePicker1.TabIndex = 216;
+            this.fechaAplicacion.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fechaAplicacion.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.fechaAplicacion.Location = new System.Drawing.Point(220, 107);
+            this.fechaAplicacion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.fechaAplicacion.Name = "fechaAplicacion";
+            this.fechaAplicacion.Size = new System.Drawing.Size(143, 23);
+            this.fechaAplicacion.TabIndex = 216;
             // 
             // textBox5
             // 
@@ -1216,21 +1216,21 @@
             this.textBox5.Location = new System.Drawing.Point(43, 108);
             this.textBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(181, 24);
+            this.textBox5.Size = new System.Drawing.Size(181, 19);
             this.textBox5.TabIndex = 215;
             this.textBox5.Text = "Fecha de aplicacion:";
             // 
-            // textBox1
+            // txt_vacuna
             // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txt_vacuna.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(248)))), ((int)(((byte)(247)))));
-            this.textBox1.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(101, 55);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(261, 31);
-            this.textBox1.TabIndex = 214;
+            this.txt_vacuna.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(248)))), ((int)(((byte)(247)))));
+            this.txt_vacuna.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_vacuna.Location = new System.Drawing.Point(101, 55);
+            this.txt_vacuna.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_vacuna.Name = "txt_vacuna";
+            this.txt_vacuna.Size = new System.Drawing.Size(261, 26);
+            this.txt_vacuna.TabIndex = 214;
             // 
             // textBox2
             // 
@@ -1243,7 +1243,7 @@
             this.textBox2.Location = new System.Drawing.Point(43, 55);
             this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(81, 24);
+            this.textBox2.Size = new System.Drawing.Size(81, 19);
             this.textBox2.TabIndex = 213;
             this.textBox2.Text = "Tipo:";
             // 
@@ -1256,7 +1256,7 @@
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(215)))), ((int)(((byte)(223)))));
             this.label2.Location = new System.Drawing.Point(37, 16);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(122, 25);
+            this.label2.Size = new System.Drawing.Size(103, 21);
             this.label2.TabIndex = 212;
             this.label2.Text = "Vacunaciones";
             // 
@@ -1266,9 +1266,9 @@
             this.panel8.Controls.Add(this.label8);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel8.Location = new System.Drawing.Point(0, 628);
-            this.panel8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel8.Margin = new System.Windows.Forms.Padding(4);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(1519, 59);
+            this.panel8.Size = new System.Drawing.Size(1523, 59);
             this.panel8.TabIndex = 178;
             // 
             // pictureBox2
@@ -1289,7 +1289,7 @@
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(160)))), ((int)(((byte)(176)))));
             this.label8.Location = new System.Drawing.Point(61, 15);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(221, 29);
+            this.label8.Size = new System.Drawing.Size(175, 23);
             this.label8.TabIndex = 125;
             this.label8.Text = "Registro de consultas";
             // 
@@ -1301,9 +1301,9 @@
             this.panel9.Controls.Add(this.panel11);
             this.panel9.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel9.Location = new System.Drawing.Point(0, 687);
-            this.panel9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel9.Margin = new System.Windows.Forms.Padding(4);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(1519, 309);
+            this.panel9.Size = new System.Drawing.Size(1523, 309);
             this.panel9.TabIndex = 179;
             // 
             // panel14
@@ -1317,7 +1317,7 @@
             this.panel14.Controls.Add(this.label11);
             this.panel14.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel14.Location = new System.Drawing.Point(1164, 0);
-            this.panel14.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel14.Margin = new System.Windows.Forms.Padding(4);
             this.panel14.Name = "panel14";
             this.panel14.Size = new System.Drawing.Size(375, 309);
             this.panel14.TabIndex = 215;
@@ -1329,7 +1329,7 @@
             this.textBox47.Location = new System.Drawing.Point(72, 266);
             this.textBox47.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox47.Name = "textBox47";
-            this.textBox47.Size = new System.Drawing.Size(201, 31);
+            this.textBox47.Size = new System.Drawing.Size(201, 26);
             this.textBox47.TabIndex = 215;
             // 
             // textBox48
@@ -1341,7 +1341,7 @@
             this.textBox48.Location = new System.Drawing.Point(63, 230);
             this.textBox48.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox48.Name = "textBox48";
-            this.textBox48.Size = new System.Drawing.Size(211, 24);
+            this.textBox48.Size = new System.Drawing.Size(211, 19);
             this.textBox48.TabIndex = 214;
             this.textBox48.Text = "Nuevas recomendaciones:";
             // 
@@ -1352,7 +1352,7 @@
             this.textBox51.Location = new System.Drawing.Point(72, 178);
             this.textBox51.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox51.Name = "textBox51";
-            this.textBox51.Size = new System.Drawing.Size(201, 31);
+            this.textBox51.Size = new System.Drawing.Size(201, 26);
             this.textBox51.TabIndex = 213;
             // 
             // textBox52
@@ -1364,7 +1364,7 @@
             this.textBox52.Location = new System.Drawing.Point(63, 143);
             this.textBox52.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox52.Name = "textBox52";
-            this.textBox52.Size = new System.Drawing.Size(211, 24);
+            this.textBox52.Size = new System.Drawing.Size(211, 19);
             this.textBox52.TabIndex = 212;
             this.textBox52.Text = "Cambios en los sintomas:";
             // 
@@ -1375,7 +1375,7 @@
             this.textBox53.Location = new System.Drawing.Point(72, 84);
             this.textBox53.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox53.Name = "textBox53";
-            this.textBox53.Size = new System.Drawing.Size(201, 31);
+            this.textBox53.Size = new System.Drawing.Size(201, 26);
             this.textBox53.TabIndex = 211;
             // 
             // textBox54
@@ -1387,7 +1387,7 @@
             this.textBox54.Location = new System.Drawing.Point(63, 54);
             this.textBox54.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox54.Name = "textBox54";
-            this.textBox54.Size = new System.Drawing.Size(235, 24);
+            this.textBox54.Size = new System.Drawing.Size(235, 19);
             this.textBox54.TabIndex = 210;
             this.textBox54.Text = "Respuesta al tratamiento:";
             // 
@@ -1398,7 +1398,7 @@
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(215)))), ((int)(((byte)(223)))));
             this.label11.Location = new System.Drawing.Point(57, 15);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(113, 25);
+            this.label11.Size = new System.Drawing.Size(95, 21);
             this.label11.TabIndex = 209;
             this.label11.Text = "Seguimiento";
             // 
@@ -1419,7 +1419,7 @@
             this.panel13.Controls.Add(this.label10);
             this.panel13.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel13.Location = new System.Drawing.Point(787, 0);
-            this.panel13.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel13.Margin = new System.Windows.Forms.Padding(4);
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(377, 309);
             this.panel13.TabIndex = 212;
@@ -1431,7 +1431,7 @@
             this.textBox42.Location = new System.Drawing.Point(184, 191);
             this.textBox42.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox42.Name = "textBox42";
-            this.textBox42.Size = new System.Drawing.Size(159, 31);
+            this.textBox42.Size = new System.Drawing.Size(159, 26);
             this.textBox42.TabIndex = 218;
             // 
             // groupBox6
@@ -1454,7 +1454,7 @@
             this.radioButton12.Location = new System.Drawing.Point(73, 16);
             this.radioButton12.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioButton12.Name = "radioButton12";
-            this.radioButton12.Size = new System.Drawing.Size(54, 28);
+            this.radioButton12.Size = new System.Drawing.Size(47, 24);
             this.radioButton12.TabIndex = 1;
             this.radioButton12.TabStop = true;
             this.radioButton12.Text = "No";
@@ -1466,7 +1466,7 @@
             this.radioButton13.Location = new System.Drawing.Point(7, 16);
             this.radioButton13.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioButton13.Name = "radioButton13";
-            this.radioButton13.Size = new System.Drawing.Size(47, 28);
+            this.radioButton13.Size = new System.Drawing.Size(41, 24);
             this.radioButton13.TabIndex = 0;
             this.radioButton13.TabStop = true;
             this.radioButton13.Text = "Si";
@@ -1481,7 +1481,7 @@
             this.textBox44.Location = new System.Drawing.Point(9, 274);
             this.textBox44.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox44.Name = "textBox44";
-            this.textBox44.Size = new System.Drawing.Size(105, 24);
+            this.textBox44.Size = new System.Drawing.Size(105, 19);
             this.textBox44.TabIndex = 221;
             this.textBox44.Text = "Especifique:";
             // 
@@ -1492,7 +1492,7 @@
             this.textBox45.Location = new System.Drawing.Point(121, 271);
             this.textBox45.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox45.Name = "textBox45";
-            this.textBox45.Size = new System.Drawing.Size(219, 31);
+            this.textBox45.Size = new System.Drawing.Size(219, 26);
             this.textBox45.TabIndex = 220;
             // 
             // textBox46
@@ -1504,7 +1504,7 @@
             this.textBox46.Location = new System.Drawing.Point(9, 239);
             this.textBox46.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox46.Name = "textBox46";
-            this.textBox46.Size = new System.Drawing.Size(185, 24);
+            this.textBox46.Size = new System.Drawing.Size(185, 19);
             this.textBox46.TabIndex = 219;
             this.textBox46.Text = "Cuidados especiales:";
             // 
@@ -1517,7 +1517,7 @@
             this.textBox43.Location = new System.Drawing.Point(9, 194);
             this.textBox43.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox43.Name = "textBox43";
-            this.textBox43.Size = new System.Drawing.Size(185, 24);
+            this.textBox43.Size = new System.Drawing.Size(185, 19);
             this.textBox43.TabIndex = 217;
             this.textBox43.Text = "Dieta recomendada:";
             // 
@@ -1528,7 +1528,7 @@
             this.textBox40.Location = new System.Drawing.Point(141, 144);
             this.textBox40.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox40.Name = "textBox40";
-            this.textBox40.Size = new System.Drawing.Size(201, 31);
+            this.textBox40.Size = new System.Drawing.Size(201, 26);
             this.textBox40.TabIndex = 216;
             // 
             // textBox41
@@ -1540,7 +1540,7 @@
             this.textBox41.Location = new System.Drawing.Point(11, 144);
             this.textBox41.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox41.Name = "textBox41";
-            this.textBox41.Size = new System.Drawing.Size(124, 24);
+            this.textBox41.Size = new System.Drawing.Size(124, 19);
             this.textBox41.TabIndex = 215;
             this.textBox41.Text = "Como tomarlo:";
             // 
@@ -1551,7 +1551,7 @@
             this.textBox38.Location = new System.Drawing.Point(139, 95);
             this.textBox38.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox38.Name = "textBox38";
-            this.textBox38.Size = new System.Drawing.Size(201, 31);
+            this.textBox38.Size = new System.Drawing.Size(201, 26);
             this.textBox38.TabIndex = 214;
             // 
             // textBox39
@@ -1563,7 +1563,7 @@
             this.textBox39.Location = new System.Drawing.Point(9, 95);
             this.textBox39.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox39.Name = "textBox39";
-            this.textBox39.Size = new System.Drawing.Size(167, 24);
+            this.textBox39.Size = new System.Drawing.Size(167, 19);
             this.textBox39.TabIndex = 213;
             this.textBox39.Text = "Dosis:";
             // 
@@ -1574,7 +1574,7 @@
             this.textBox37.Location = new System.Drawing.Point(140, 43);
             this.textBox37.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox37.Name = "textBox37";
-            this.textBox37.Size = new System.Drawing.Size(201, 31);
+            this.textBox37.Size = new System.Drawing.Size(201, 26);
             this.textBox37.TabIndex = 212;
             // 
             // textBox36
@@ -1586,7 +1586,7 @@
             this.textBox36.Location = new System.Drawing.Point(11, 43);
             this.textBox36.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox36.Name = "textBox36";
-            this.textBox36.Size = new System.Drawing.Size(167, 24);
+            this.textBox36.Size = new System.Drawing.Size(167, 19);
             this.textBox36.TabIndex = 211;
             this.textBox36.Text = "Medicamentos:";
             // 
@@ -1597,7 +1597,7 @@
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(215)))), ((int)(((byte)(223)))));
             this.label10.Location = new System.Drawing.Point(7, 4);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(117, 25);
+            this.label10.Size = new System.Drawing.Size(97, 21);
             this.label10.TabIndex = 210;
             this.label10.Text = "Tratamiento";
             // 
@@ -1610,7 +1610,7 @@
             this.panel12.Controls.Add(this.label9);
             this.panel12.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel12.Location = new System.Drawing.Point(412, 0);
-            this.panel12.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel12.Margin = new System.Windows.Forms.Padding(4);
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(375, 309);
             this.panel12.TabIndex = 211;
@@ -1622,7 +1622,7 @@
             this.textBox33.Location = new System.Drawing.Point(121, 87);
             this.textBox33.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox33.Name = "textBox33";
-            this.textBox33.Size = new System.Drawing.Size(221, 31);
+            this.textBox33.Size = new System.Drawing.Size(221, 26);
             this.textBox33.TabIndex = 194;
             // 
             // textBox35
@@ -1634,7 +1634,7 @@
             this.textBox35.Location = new System.Drawing.Point(12, 87);
             this.textBox35.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox35.Name = "textBox35";
-            this.textBox35.Size = new System.Drawing.Size(103, 24);
+            this.textBox35.Size = new System.Drawing.Size(103, 19);
             this.textBox35.TabIndex = 193;
             this.textBox35.Text = "Resultados:";
             // 
@@ -1678,7 +1678,7 @@
             this.textBox34.Location = new System.Drawing.Point(11, 43);
             this.textBox34.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox34.Name = "textBox34";
-            this.textBox34.Size = new System.Drawing.Size(167, 24);
+            this.textBox34.Size = new System.Drawing.Size(167, 19);
             this.textBox34.TabIndex = 191;
             this.textBox34.Text = "Pruebas realizadas:";
             // 
@@ -1689,7 +1689,7 @@
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(215)))), ((int)(((byte)(223)))));
             this.label9.Location = new System.Drawing.Point(7, 4);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(88, 25);
+            this.label9.Size = new System.Drawing.Size(72, 21);
             this.label9.TabIndex = 190;
             this.label9.Text = "Pruebas ";
             // 
@@ -1707,7 +1707,7 @@
             this.panel11.Controls.Add(this.comboBox1);
             this.panel11.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel11.Location = new System.Drawing.Point(0, 0);
-            this.panel11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel11.Margin = new System.Windows.Forms.Padding(4);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(412, 309);
             this.panel11.TabIndex = 210;
@@ -1719,7 +1719,7 @@
             this.textBox31.Location = new System.Drawing.Point(159, 219);
             this.textBox31.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox31.Name = "textBox31";
-            this.textBox31.Size = new System.Drawing.Size(241, 31);
+            this.textBox31.Size = new System.Drawing.Size(241, 26);
             this.textBox31.TabIndex = 194;
             // 
             // textBox32
@@ -1731,7 +1731,7 @@
             this.textBox32.Location = new System.Drawing.Point(15, 219);
             this.textBox32.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox32.Name = "textBox32";
-            this.textBox32.Size = new System.Drawing.Size(105, 24);
+            this.textBox32.Size = new System.Drawing.Size(105, 19);
             this.textBox32.TabIndex = 193;
             this.textBox32.Text = "Diagnostico:";
             // 
@@ -1742,7 +1742,7 @@
             this.textBox29.Location = new System.Drawing.Point(159, 178);
             this.textBox29.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox29.Name = "textBox29";
-            this.textBox29.Size = new System.Drawing.Size(241, 31);
+            this.textBox29.Size = new System.Drawing.Size(241, 26);
             this.textBox29.TabIndex = 192;
             // 
             // textBox30
@@ -1754,7 +1754,7 @@
             this.textBox30.Location = new System.Drawing.Point(13, 182);
             this.textBox30.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox30.Name = "textBox30";
-            this.textBox30.Size = new System.Drawing.Size(123, 24);
+            this.textBox30.Size = new System.Drawing.Size(123, 19);
             this.textBox30.TabIndex = 191;
             this.textBox30.Text = "Examen fisico:";
             // 
@@ -1765,7 +1765,7 @@
             this.textBox27.Location = new System.Drawing.Point(201, 134);
             this.textBox27.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox27.Name = "textBox27";
-            this.textBox27.Size = new System.Drawing.Size(199, 31);
+            this.textBox27.Size = new System.Drawing.Size(199, 26);
             this.textBox27.TabIndex = 190;
             // 
             // textBox28
@@ -1777,7 +1777,7 @@
             this.textBox28.Location = new System.Drawing.Point(13, 134);
             this.textBox28.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox28.Name = "textBox28";
-            this.textBox28.Size = new System.Drawing.Size(183, 24);
+            this.textBox28.Size = new System.Drawing.Size(183, 19);
             this.textBox28.TabIndex = 189;
             this.textBox28.Text = "Motivo de la consulta:";
             // 
@@ -1788,7 +1788,7 @@
             this.dateTimePicker5.Location = new System.Drawing.Point(179, 43);
             this.dateTimePicker5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dateTimePicker5.Name = "dateTimePicker5";
-            this.dateTimePicker5.Size = new System.Drawing.Size(151, 27);
+            this.dateTimePicker5.Size = new System.Drawing.Size(151, 23);
             this.dateTimePicker5.TabIndex = 188;
             // 
             // textBox26
@@ -1800,7 +1800,7 @@
             this.textBox26.Location = new System.Drawing.Point(15, 44);
             this.textBox26.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox26.Name = "textBox26";
-            this.textBox26.Size = new System.Drawing.Size(181, 24);
+            this.textBox26.Size = new System.Drawing.Size(181, 19);
             this.textBox26.TabIndex = 187;
             this.textBox26.Text = "Fecha de consulta:";
             // 
@@ -1813,7 +1813,7 @@
             this.textBox25.Location = new System.Drawing.Point(15, 87);
             this.textBox25.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox25.Name = "textBox25";
-            this.textBox25.Size = new System.Drawing.Size(181, 24);
+            this.textBox25.Size = new System.Drawing.Size(181, 19);
             this.textBox25.TabIndex = 186;
             this.textBox25.Text = "Consultas anteriores:";
             // 
@@ -1833,9 +1833,9 @@
             this.panel10.Controls.Add(this.btnenviar);
             this.panel10.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel10.Location = new System.Drawing.Point(0, 996);
-            this.panel10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel10.Margin = new System.Windows.Forms.Padding(4);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(1519, 73);
+            this.panel10.Size = new System.Drawing.Size(1523, 73);
             this.panel10.TabIndex = 180;
             // 
             // button2
@@ -1876,6 +1876,7 @@
             this.btnenviar.TabIndex = 171;
             this.btnenviar.Text = "GUARDAR";
             this.btnenviar.UseVisualStyleBackColor = true;
+            this.btnenviar.Click += new System.EventHandler(this.btnenviar_Click_1);
             // 
             // frm_historial_clinico
             // 
@@ -1942,9 +1943,9 @@
         #endregion
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton rbt_otro;
+        private System.Windows.Forms.RadioButton rbt_gato;
+        private System.Windows.Forms.RadioButton rbt_perro;
         private System.Windows.Forms.PictureBox logotipo;
         private System.Windows.Forms.TextBox txtotro;
         private System.Windows.Forms.TextBox txtedad;
@@ -1985,26 +1986,26 @@
         private System.Windows.Forms.TextBox textBox23;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox textBox24;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker fecha_aplicacion;
         private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txt_tipoDesparasitante;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.DateTimePicker dateTimePicker4;
+        private System.Windows.Forms.DateTimePicker fecha_accidente;
         private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.RadioButton radioButton10;
-        private System.Windows.Forms.RadioButton radioButton11;
+        private System.Windows.Forms.RadioButton rbt_no;
+        private System.Windows.Forms.RadioButton rbt_si;
         private System.Windows.Forms.TextBox textBox19;
-        private System.Windows.Forms.TextBox textBox20;
+        private System.Windows.Forms.TextBox txt_especifique;
         private System.Windows.Forms.TextBox textBox21;
         private System.Windows.Forms.TextBox textBox18;
-        private System.Windows.Forms.TextBox textBox16;
+        private System.Windows.Forms.TextBox txt_descripcion;
         private System.Windows.Forms.TextBox textBox17;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker fechaAplicacion;
         private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt_vacuna;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel8;

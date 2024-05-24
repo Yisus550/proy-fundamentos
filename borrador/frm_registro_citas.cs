@@ -47,13 +47,13 @@ namespace borrador
                 try
                 {
                     connection.Open();
-                    string query = "INSERT INTO citas (Medico, nombre_mascota, especie, raza, propietario, telefono, fecha, hora, sintomas) VALUES (@Medico, @nombre_mascota, @especie, @raza, @propietario, @telefono, @fecha, @hora, @sintomas)";
+                    string query = "INSERT INTO cita (medico, nombre_mascota, especie, raza, propietario, telefono, fecha, hora, sintomas) VALUES (@medico, @nombre_mascota, @especie, @raza, @propietario, @telefono, @fecha, @hora, @sintomas)";
 
                     using (MySqlCommand command = new MySqlCommand(query, connection))
                     {
 
                         //Enviar parametros
-                        command.Parameters.AddWithValue("@Medico", cbx_medico.Text);
+                        command.Parameters.AddWithValue("@medico", cbx_medico.Text);
                         command.Parameters.AddWithValue("@nombre_mascota", txtnombreM.Text);
                         command.Parameters.AddWithValue("@especie", especie);
                         command.Parameters.AddWithValue("@raza", txtraza.Text);
@@ -69,8 +69,9 @@ namespace borrador
                         LimpiarParametros();
 
                     }
-                        MessageBox.Show("Cita registrada exitosamente.");
-                }catch (Exception ex)
+                    MessageBox.Show("Cita registrada exitosamente.");
+                }
+                catch (Exception ex)
                 {
                     MessageBox.Show("Error al registrar cita: " + ex.Message);
                 }
