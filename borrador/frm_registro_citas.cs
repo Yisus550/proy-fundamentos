@@ -92,7 +92,17 @@ namespace borrador
                 cbx_Hora.SelectedIndex = -1;
                 txt_sintomas.Clear();
             }
-        
+
+        private void rbt_otro_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rbt_otro.Checked)
+            {
+                txt_otro.Enabled = true;
+            } else
+            {
+                txt_otro.Enabled = false;
+            }
+        }
     }
 }
 

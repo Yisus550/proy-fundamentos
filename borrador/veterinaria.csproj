@@ -143,12 +143,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Data_gridview.resx">
-      <DependentUpon>Data_gridview.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Editar.resx">
-      <DependentUpon>Editar.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frm_registro_citas.resx">
       <DependentUpon>frm_registro_citas.cs</DependentUpon>
     </EmbeddedResource>

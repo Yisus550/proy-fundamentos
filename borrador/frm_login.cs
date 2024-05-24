@@ -22,10 +22,9 @@ namespace borrador
         {
             InitializeComponent();
 
-            // Establece el botón de previsualización
             btn_mostrarContra.Text = "Mostrar";
-            // Asegura que la contraseña esté oculta al cargar el formulario
             txt_Contra.UseSystemPasswordChar = true;
+            dateTimePicker1.Value = DateTime.Now;
         }
 
         private void btningresar_Click(object sender, EventArgs e)
@@ -36,7 +35,7 @@ namespace borrador
 
         private void btningresar_Click_1(object sender, EventArgs e)
         {
-            string connectionString = "Server=localhost;Database=veterinaria;User ID=Jose;Password=perrito123;Pooling=false;";
+            string connectionString = "Server=localhost;Database=veterianria;User=root;Password=;Pooling=false;";
             string username = txt_Usuario.Text;
             string password = txt_Contra.Text;
 
@@ -68,12 +67,7 @@ namespace borrador
 
                     if (userCount > 0)
                     {
-                        MessageBox.Show("Iniciando Sesion");
-
                         GuardarHoraEntrada(connection, username);
-                        // Aquí puedes abrir el siguiente formulario o realizar alguna acción
-                        frm_principal princi = new frm_principal();
-                        princi.Show();
                     }
                     else
                     {
