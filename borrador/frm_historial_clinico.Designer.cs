@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_historial_clinico));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txt_nacimiento = new System.Windows.Forms.TextBox();
+            this.btn_buscar = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.rbt_otro = new System.Windows.Forms.RadioButton();
             this.rbt_gato = new System.Windows.Forms.RadioButton();
@@ -40,7 +42,6 @@
             this.txtcolor = new System.Windows.Forms.TextBox();
             this.edad = new System.Windows.Forms.TextBox();
             this.color = new System.Windows.Forms.TextBox();
-            this.fecha = new System.Windows.Forms.DateTimePicker();
             this.fechanacimiento = new System.Windows.Forms.TextBox();
             this.txtraza = new System.Windows.Forms.TextBox();
             this.raza = new System.Windows.Forms.TextBox();
@@ -60,30 +61,30 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
-            this.radioButton7 = new System.Windows.Forms.RadioButton();
-            this.textBox15 = new System.Windows.Forms.TextBox();
+            this.rbt_noCir = new System.Windows.Forms.RadioButton();
+            this.rbt_siCir = new System.Windows.Forms.RadioButton();
+            this.txt_cirujano = new System.Windows.Forms.TextBox();
             this.textBox14 = new System.Windows.Forms.TextBox();
-            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
+            this.fecha_cirugia = new System.Windows.Forms.DateTimePicker();
             this.textBox13 = new System.Windows.Forms.TextBox();
             this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.txt_especifiqueCir = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.textBox12 = new System.Windows.Forms.TextBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.radioButton5 = new System.Windows.Forms.RadioButton();
-            this.radioButton6 = new System.Windows.Forms.RadioButton();
+            this.rbt_NoAle = new System.Windows.Forms.RadioButton();
+            this.rbt_siAl = new System.Windows.Forms.RadioButton();
             this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.txt_especifiqueAle = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.radioButton8 = new System.Windows.Forms.RadioButton();
-            this.radioButton9 = new System.Windows.Forms.RadioButton();
+            this.rbt_NoMe = new System.Windows.Forms.RadioButton();
+            this.rbt_siMe = new System.Windows.Forms.RadioButton();
             this.textBox22 = new System.Windows.Forms.TextBox();
-            this.textBox23 = new System.Windows.Forms.TextBox();
+            this.txt_especifiqueM = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.textBox24 = new System.Windows.Forms.TextBox();
             this.fecha_aplicacion = new System.Windows.Forms.DateTimePicker();
@@ -185,6 +186,8 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.txt_nacimiento);
+            this.panel1.Controls.Add(this.btn_buscar);
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Controls.Add(this.logotipo);
             this.panel1.Controls.Add(this.txtotro);
@@ -192,7 +195,6 @@
             this.panel1.Controls.Add(this.txtcolor);
             this.panel1.Controls.Add(this.edad);
             this.panel1.Controls.Add(this.color);
-            this.panel1.Controls.Add(this.fecha);
             this.panel1.Controls.Add(this.fechanacimiento);
             this.panel1.Controls.Add(this.txtraza);
             this.panel1.Controls.Add(this.raza);
@@ -210,8 +212,29 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1523, 198);
+            this.panel1.Size = new System.Drawing.Size(1557, 198);
             this.panel1.TabIndex = 175;
+            // 
+            // txt_nacimiento
+            // 
+            this.txt_nacimiento.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.txt_nacimiento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(248)))), ((int)(((byte)(247)))));
+            this.txt_nacimiento.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_nacimiento.Location = new System.Drawing.Point(157, 164);
+            this.txt_nacimiento.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_nacimiento.Name = "txt_nacimiento";
+            this.txt_nacimiento.Size = new System.Drawing.Size(206, 26);
+            this.txt_nacimiento.TabIndex = 196;
+            // 
+            // btn_buscar
+            // 
+            this.btn_buscar.Location = new System.Drawing.Point(272, 25);
+            this.btn_buscar.Name = "btn_buscar";
+            this.btn_buscar.Size = new System.Drawing.Size(73, 23);
+            this.btn_buscar.TabIndex = 193;
+            this.btn_buscar.Text = "buscar";
+            this.btn_buscar.UseVisualStyleBackColor = true;
+            this.btn_buscar.Click += new System.EventHandler(this.btn_buscar_Click);
             // 
             // groupBox1
             // 
@@ -269,7 +292,7 @@
             // 
             this.logotipo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.logotipo.Image = ((System.Drawing.Image)(resources.GetObject("logotipo.Image")));
-            this.logotipo.Location = new System.Drawing.Point(1271, 14);
+            this.logotipo.Location = new System.Drawing.Point(1305, 14);
             this.logotipo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.logotipo.Name = "logotipo";
             this.logotipo.Size = new System.Drawing.Size(255, 153);
@@ -337,17 +360,6 @@
             this.color.Size = new System.Drawing.Size(81, 19);
             this.color.TabIndex = 186;
             this.color.Text = "Color:";
-            // 
-            // fecha
-            // 
-            this.fecha.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.fecha.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.fecha.Location = new System.Drawing.Point(187, 162);
-            this.fecha.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.fecha.Name = "fecha";
-            this.fecha.Size = new System.Drawing.Size(151, 23);
-            this.fecha.TabIndex = 185;
             // 
             // fechanacimiento
             // 
@@ -526,7 +538,7 @@
             this.panel2.Location = new System.Drawing.Point(0, 198);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1523, 66);
+            this.panel2.Size = new System.Drawing.Size(1557, 66);
             this.panel2.TabIndex = 176;
             // 
             // pictureBox1
@@ -561,18 +573,18 @@
             this.panel3.Location = new System.Drawing.Point(0, 264);
             this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1523, 364);
+            this.panel3.Size = new System.Drawing.Size(1557, 364);
             this.panel3.TabIndex = 177;
             // 
             // panel7
             // 
             this.panel7.Controls.Add(this.groupBox3);
-            this.panel7.Controls.Add(this.textBox15);
+            this.panel7.Controls.Add(this.txt_cirujano);
             this.panel7.Controls.Add(this.textBox14);
-            this.panel7.Controls.Add(this.dateTimePicker3);
+            this.panel7.Controls.Add(this.fecha_cirugia);
             this.panel7.Controls.Add(this.textBox13);
             this.panel7.Controls.Add(this.textBox10);
-            this.panel7.Controls.Add(this.textBox11);
+            this.panel7.Controls.Add(this.txt_especifiqueCir);
             this.panel7.Controls.Add(this.label5);
             this.panel7.Controls.Add(this.textBox12);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Left;
@@ -586,8 +598,8 @@
             // 
             this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox3.Controls.Add(this.radioButton4);
-            this.groupBox3.Controls.Add(this.radioButton7);
+            this.groupBox3.Controls.Add(this.rbt_noCir);
+            this.groupBox3.Controls.Add(this.rbt_siCir);
             this.groupBox3.Font = new System.Drawing.Font("Comic Sans MS", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(158)))), ((int)(((byte)(162)))));
             this.groupBox3.Location = new System.Drawing.Point(189, 38);
@@ -598,41 +610,41 @@
             this.groupBox3.TabIndex = 218;
             this.groupBox3.TabStop = false;
             // 
-            // radioButton4
+            // rbt_noCir
             // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Location = new System.Drawing.Point(73, 16);
-            this.radioButton4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(47, 24);
-            this.radioButton4.TabIndex = 1;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "No";
-            this.radioButton4.UseVisualStyleBackColor = true;
+            this.rbt_noCir.AutoSize = true;
+            this.rbt_noCir.Location = new System.Drawing.Point(73, 16);
+            this.rbt_noCir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rbt_noCir.Name = "rbt_noCir";
+            this.rbt_noCir.Size = new System.Drawing.Size(47, 24);
+            this.rbt_noCir.TabIndex = 1;
+            this.rbt_noCir.TabStop = true;
+            this.rbt_noCir.Text = "No";
+            this.rbt_noCir.UseVisualStyleBackColor = true;
             // 
-            // radioButton7
+            // rbt_siCir
             // 
-            this.radioButton7.AutoSize = true;
-            this.radioButton7.Location = new System.Drawing.Point(7, 16);
-            this.radioButton7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.radioButton7.Name = "radioButton7";
-            this.radioButton7.Size = new System.Drawing.Size(41, 24);
-            this.radioButton7.TabIndex = 0;
-            this.radioButton7.TabStop = true;
-            this.radioButton7.Text = "Si";
-            this.radioButton7.UseVisualStyleBackColor = true;
+            this.rbt_siCir.AutoSize = true;
+            this.rbt_siCir.Location = new System.Drawing.Point(7, 16);
+            this.rbt_siCir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rbt_siCir.Name = "rbt_siCir";
+            this.rbt_siCir.Size = new System.Drawing.Size(41, 24);
+            this.rbt_siCir.TabIndex = 0;
+            this.rbt_siCir.TabStop = true;
+            this.rbt_siCir.Text = "Si";
+            this.rbt_siCir.UseVisualStyleBackColor = true;
             // 
-            // textBox15
+            // txt_cirujano
             // 
-            this.textBox15.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txt_cirujano.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(248)))), ((int)(((byte)(247)))));
-            this.textBox15.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox15.Location = new System.Drawing.Point(121, 180);
-            this.textBox15.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(231, 26);
-            this.textBox15.TabIndex = 217;
+            this.txt_cirujano.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(248)))), ((int)(((byte)(247)))));
+            this.txt_cirujano.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_cirujano.Location = new System.Drawing.Point(121, 180);
+            this.txt_cirujano.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_cirujano.Name = "txt_cirujano";
+            this.txt_cirujano.Size = new System.Drawing.Size(231, 26);
+            this.txt_cirujano.TabIndex = 217;
             // 
             // textBox14
             // 
@@ -649,17 +661,17 @@
             this.textBox14.TabIndex = 216;
             this.textBox14.Text = "Cirujano:";
             // 
-            // dateTimePicker3
+            // fecha_cirugia
             // 
-            this.dateTimePicker3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.fecha_cirugia.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dateTimePicker3.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker3.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker3.Location = new System.Drawing.Point(189, 94);
-            this.dateTimePicker3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dateTimePicker3.Name = "dateTimePicker3";
-            this.dateTimePicker3.Size = new System.Drawing.Size(169, 23);
-            this.dateTimePicker3.TabIndex = 215;
+            this.fecha_cirugia.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fecha_cirugia.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.fecha_cirugia.Location = new System.Drawing.Point(189, 94);
+            this.fecha_cirugia.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.fecha_cirugia.Name = "fecha_cirugia";
+            this.fecha_cirugia.Size = new System.Drawing.Size(169, 23);
+            this.fecha_cirugia.TabIndex = 215;
             // 
             // textBox13
             // 
@@ -691,17 +703,17 @@
             this.textBox10.TabIndex = 213;
             this.textBox10.Text = "Especifique:";
             // 
-            // textBox11
+            // txt_especifiqueCir
             // 
-            this.textBox11.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txt_especifiqueCir.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(248)))), ((int)(((byte)(247)))));
-            this.textBox11.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox11.Location = new System.Drawing.Point(121, 132);
-            this.textBox11.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(231, 26);
-            this.textBox11.TabIndex = 212;
+            this.txt_especifiqueCir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(248)))), ((int)(((byte)(247)))));
+            this.txt_especifiqueCir.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_especifiqueCir.Location = new System.Drawing.Point(121, 132);
+            this.txt_especifiqueCir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_especifiqueCir.Name = "txt_especifiqueCir";
+            this.txt_especifiqueCir.Size = new System.Drawing.Size(231, 26);
+            this.txt_especifiqueCir.TabIndex = 212;
             // 
             // label5
             // 
@@ -735,7 +747,7 @@
             // 
             this.panel6.Controls.Add(this.groupBox2);
             this.panel6.Controls.Add(this.textBox9);
-            this.panel6.Controls.Add(this.textBox8);
+            this.panel6.Controls.Add(this.txt_especifiqueAle);
             this.panel6.Controls.Add(this.label4);
             this.panel6.Controls.Add(this.textBox7);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Left;
@@ -749,8 +761,8 @@
             // 
             this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox2.Controls.Add(this.radioButton5);
-            this.groupBox2.Controls.Add(this.radioButton6);
+            this.groupBox2.Controls.Add(this.rbt_NoAle);
+            this.groupBox2.Controls.Add(this.rbt_siAl);
             this.groupBox2.Font = new System.Drawing.Font("Comic Sans MS", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(158)))), ((int)(((byte)(162)))));
             this.groupBox2.Location = new System.Drawing.Point(97, 38);
@@ -761,29 +773,29 @@
             this.groupBox2.TabIndex = 213;
             this.groupBox2.TabStop = false;
             // 
-            // radioButton5
+            // rbt_NoAle
             // 
-            this.radioButton5.AutoSize = true;
-            this.radioButton5.Location = new System.Drawing.Point(73, 16);
-            this.radioButton5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.radioButton5.Name = "radioButton5";
-            this.radioButton5.Size = new System.Drawing.Size(47, 24);
-            this.radioButton5.TabIndex = 1;
-            this.radioButton5.TabStop = true;
-            this.radioButton5.Text = "No";
-            this.radioButton5.UseVisualStyleBackColor = true;
+            this.rbt_NoAle.AutoSize = true;
+            this.rbt_NoAle.Location = new System.Drawing.Point(73, 16);
+            this.rbt_NoAle.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rbt_NoAle.Name = "rbt_NoAle";
+            this.rbt_NoAle.Size = new System.Drawing.Size(47, 24);
+            this.rbt_NoAle.TabIndex = 1;
+            this.rbt_NoAle.TabStop = true;
+            this.rbt_NoAle.Text = "No";
+            this.rbt_NoAle.UseVisualStyleBackColor = true;
             // 
-            // radioButton6
+            // rbt_siAl
             // 
-            this.radioButton6.AutoSize = true;
-            this.radioButton6.Location = new System.Drawing.Point(7, 16);
-            this.radioButton6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.radioButton6.Name = "radioButton6";
-            this.radioButton6.Size = new System.Drawing.Size(41, 24);
-            this.radioButton6.TabIndex = 0;
-            this.radioButton6.TabStop = true;
-            this.radioButton6.Text = "Si";
-            this.radioButton6.UseVisualStyleBackColor = true;
+            this.rbt_siAl.AutoSize = true;
+            this.rbt_siAl.Location = new System.Drawing.Point(7, 16);
+            this.rbt_siAl.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rbt_siAl.Name = "rbt_siAl";
+            this.rbt_siAl.Size = new System.Drawing.Size(41, 24);
+            this.rbt_siAl.TabIndex = 0;
+            this.rbt_siAl.TabStop = true;
+            this.rbt_siAl.Text = "Si";
+            this.rbt_siAl.UseVisualStyleBackColor = true;
             // 
             // textBox9
             // 
@@ -800,17 +812,17 @@
             this.textBox9.TabIndex = 212;
             this.textBox9.Text = "Especifique:";
             // 
-            // textBox8
+            // txt_especifiqueAle
             // 
-            this.textBox8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txt_especifiqueAle.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(248)))), ((int)(((byte)(247)))));
-            this.textBox8.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.Location = new System.Drawing.Point(123, 89);
-            this.textBox8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(220, 26);
-            this.textBox8.TabIndex = 211;
+            this.txt_especifiqueAle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(248)))), ((int)(((byte)(247)))));
+            this.txt_especifiqueAle.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_especifiqueAle.Location = new System.Drawing.Point(123, 89);
+            this.txt_especifiqueAle.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_especifiqueAle.Name = "txt_especifiqueAle";
+            this.txt_especifiqueAle.Size = new System.Drawing.Size(220, 26);
+            this.txt_especifiqueAle.TabIndex = 211;
             // 
             // label4
             // 
@@ -844,7 +856,7 @@
             // 
             this.panel5.Controls.Add(this.groupBox4);
             this.panel5.Controls.Add(this.textBox22);
-            this.panel5.Controls.Add(this.textBox23);
+            this.panel5.Controls.Add(this.txt_especifiqueM);
             this.panel5.Controls.Add(this.label7);
             this.panel5.Controls.Add(this.textBox24);
             this.panel5.Controls.Add(this.fecha_aplicacion);
@@ -863,8 +875,8 @@
             // 
             this.groupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox4.Controls.Add(this.radioButton8);
-            this.groupBox4.Controls.Add(this.radioButton9);
+            this.groupBox4.Controls.Add(this.rbt_NoMe);
+            this.groupBox4.Controls.Add(this.rbt_siMe);
             this.groupBox4.Font = new System.Drawing.Font("Comic Sans MS", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(158)))), ((int)(((byte)(162)))));
             this.groupBox4.Location = new System.Drawing.Point(231, 175);
@@ -875,29 +887,29 @@
             this.groupBox4.TabIndex = 220;
             this.groupBox4.TabStop = false;
             // 
-            // radioButton8
+            // rbt_NoMe
             // 
-            this.radioButton8.AutoSize = true;
-            this.radioButton8.Location = new System.Drawing.Point(73, 16);
-            this.radioButton8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.radioButton8.Name = "radioButton8";
-            this.radioButton8.Size = new System.Drawing.Size(47, 24);
-            this.radioButton8.TabIndex = 1;
-            this.radioButton8.TabStop = true;
-            this.radioButton8.Text = "No";
-            this.radioButton8.UseVisualStyleBackColor = true;
+            this.rbt_NoMe.AutoSize = true;
+            this.rbt_NoMe.Location = new System.Drawing.Point(73, 16);
+            this.rbt_NoMe.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rbt_NoMe.Name = "rbt_NoMe";
+            this.rbt_NoMe.Size = new System.Drawing.Size(47, 24);
+            this.rbt_NoMe.TabIndex = 1;
+            this.rbt_NoMe.TabStop = true;
+            this.rbt_NoMe.Text = "No";
+            this.rbt_NoMe.UseVisualStyleBackColor = true;
             // 
-            // radioButton9
+            // rbt_siMe
             // 
-            this.radioButton9.AutoSize = true;
-            this.radioButton9.Location = new System.Drawing.Point(7, 16);
-            this.radioButton9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.radioButton9.Name = "radioButton9";
-            this.radioButton9.Size = new System.Drawing.Size(41, 24);
-            this.radioButton9.TabIndex = 0;
-            this.radioButton9.TabStop = true;
-            this.radioButton9.Text = "Si";
-            this.radioButton9.UseVisualStyleBackColor = true;
+            this.rbt_siMe.AutoSize = true;
+            this.rbt_siMe.Location = new System.Drawing.Point(7, 16);
+            this.rbt_siMe.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rbt_siMe.Name = "rbt_siMe";
+            this.rbt_siMe.Size = new System.Drawing.Size(41, 24);
+            this.rbt_siMe.TabIndex = 0;
+            this.rbt_siMe.TabStop = true;
+            this.rbt_siMe.Text = "Si";
+            this.rbt_siMe.UseVisualStyleBackColor = true;
             // 
             // textBox22
             // 
@@ -914,17 +926,17 @@
             this.textBox22.TabIndex = 219;
             this.textBox22.Text = "Especifique:";
             // 
-            // textBox23
+            // txt_especifiqueM
             // 
-            this.textBox23.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txt_especifiqueM.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(248)))), ((int)(((byte)(247)))));
-            this.textBox23.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox23.Location = new System.Drawing.Point(123, 225);
-            this.textBox23.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox23.Name = "textBox23";
-            this.textBox23.Size = new System.Drawing.Size(219, 26);
-            this.textBox23.TabIndex = 218;
+            this.txt_especifiqueM.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(248)))), ((int)(((byte)(247)))));
+            this.txt_especifiqueM.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_especifiqueM.Location = new System.Drawing.Point(123, 225);
+            this.txt_especifiqueM.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_especifiqueM.Name = "txt_especifiqueM";
+            this.txt_especifiqueM.Size = new System.Drawing.Size(219, 26);
+            this.txt_especifiqueM.TabIndex = 218;
             // 
             // label7
             // 
@@ -1268,7 +1280,7 @@
             this.panel8.Location = new System.Drawing.Point(0, 628);
             this.panel8.Margin = new System.Windows.Forms.Padding(4);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(1523, 59);
+            this.panel8.Size = new System.Drawing.Size(1557, 59);
             this.panel8.TabIndex = 178;
             // 
             // pictureBox2
@@ -1303,7 +1315,7 @@
             this.panel9.Location = new System.Drawing.Point(0, 687);
             this.panel9.Margin = new System.Windows.Forms.Padding(4);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(1523, 309);
+            this.panel9.Size = new System.Drawing.Size(1557, 309);
             this.panel9.TabIndex = 179;
             // 
             // panel14
@@ -1835,7 +1847,7 @@
             this.panel10.Location = new System.Drawing.Point(0, 996);
             this.panel10.Margin = new System.Windows.Forms.Padding(4);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(1523, 73);
+            this.panel10.Size = new System.Drawing.Size(1557, 73);
             this.panel10.TabIndex = 180;
             // 
             // button2
@@ -1869,7 +1881,7 @@
             this.btnenviar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnenviar.Font = new System.Drawing.Font("Comic Sans MS", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnenviar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(160)))), ((int)(((byte)(176)))));
-            this.btnenviar.Location = new System.Drawing.Point(8, 17);
+            this.btnenviar.Location = new System.Drawing.Point(7, 17);
             this.btnenviar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnenviar.Name = "btnenviar";
             this.btnenviar.Size = new System.Drawing.Size(156, 34);
@@ -1884,7 +1896,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(248)))), ((int)(((byte)(247)))));
-            this.ClientSize = new System.Drawing.Size(1540, 1055);
+            this.ClientSize = new System.Drawing.Size(1574, 1055);
             this.Controls.Add(this.panel10);
             this.Controls.Add(this.panel9);
             this.Controls.Add(this.panel8);
@@ -1894,7 +1906,6 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frm_historial_clinico";
             this.Text = "HistorialClinico";
-            this.Load += new System.EventHandler(this.HistorialClinico_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -1952,7 +1963,6 @@
         private System.Windows.Forms.TextBox txtcolor;
         private System.Windows.Forms.TextBox edad;
         private System.Windows.Forms.TextBox color;
-        private System.Windows.Forms.DateTimePicker fecha;
         private System.Windows.Forms.TextBox fechanacimiento;
         private System.Windows.Forms.TextBox txtraza;
         private System.Windows.Forms.TextBox raza;
@@ -1972,18 +1982,18 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.RadioButton radioButton5;
-        private System.Windows.Forms.RadioButton radioButton6;
+        private System.Windows.Forms.RadioButton rbt_NoAle;
+        private System.Windows.Forms.RadioButton rbt_siAl;
         private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox txt_especifiqueAle;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.RadioButton radioButton8;
-        private System.Windows.Forms.RadioButton radioButton9;
+        private System.Windows.Forms.RadioButton rbt_NoMe;
+        private System.Windows.Forms.RadioButton rbt_siMe;
         private System.Windows.Forms.TextBox textBox22;
-        private System.Windows.Forms.TextBox textBox23;
+        private System.Windows.Forms.TextBox txt_especifiqueM;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox textBox24;
         private System.Windows.Forms.DateTimePicker fecha_aplicacion;
@@ -2051,14 +2061,14 @@
         private System.Windows.Forms.Button btnenviar;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.RadioButton radioButton4;
-        private System.Windows.Forms.RadioButton radioButton7;
-        private System.Windows.Forms.TextBox textBox15;
+        private System.Windows.Forms.RadioButton rbt_noCir;
+        private System.Windows.Forms.RadioButton rbt_siCir;
+        private System.Windows.Forms.TextBox txt_cirujano;
         private System.Windows.Forms.TextBox textBox14;
-        private System.Windows.Forms.DateTimePicker dateTimePicker3;
+        private System.Windows.Forms.DateTimePicker fecha_cirugia;
         private System.Windows.Forms.TextBox textBox13;
         private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.TextBox txt_especifiqueCir;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBox12;
         private System.Windows.Forms.Panel panel14;
@@ -2069,5 +2079,7 @@
         private System.Windows.Forms.TextBox textBox53;
         private System.Windows.Forms.TextBox textBox54;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Button btn_buscar;
+        private System.Windows.Forms.TextBox txt_nacimiento;
     }
 }
