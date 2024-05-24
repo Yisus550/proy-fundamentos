@@ -1,0 +1,14 @@
+C:\Users\elarv\OneDrive\Documentos\proy-fundamentos\borrador\bin\Debug\borrador.exe.config
+C:\Users\elarv\OneDrive\Documentos\proy-fundamentos\borrador\bin\Debug\borrador.exe
+C:\Users\elarv\OneDrive\Documentos\proy-fundamentos\borrador\bin\Debug\borrador.pdb
+C:\Users\elarv\OneDrive\Documentos\proy-fundamentos\borrador\obj\Debug\veterinaria.csproj.AssemblyReference.cache
+C:\Users\elarv\OneDrive\Documentos\proy-fundamentos\borrador\obj\Debug\borrador.frm_principal.resources
+C:\Users\elarv\OneDrive\Documentos\proy-fundamentos\borrador\obj\Debug\borrador.frm_registro_mascotas.resources
+C:\Users\elarv\OneDrive\Documentos\proy-fundamentos\borrador\obj\Debug\borrador.frm_login.resources
+C:\Users\elarv\OneDrive\Documentos\proy-fundamentos\borrador\obj\Debug\borrador.frm_historial_clinico.resources
+C:\Users\elarv\OneDrive\Documentos\proy-fundamentos\borrador\obj\Debug\borrador.Properties.Resources.resources
+C:\Users\elarv\OneDrive\Documentos\proy-fundamentos\borrador\obj\Debug\veterinaria.csproj.GenerateResource.cache
+C:\Users\elarv\OneDrive\Documentos\proy-fundamentos\borrador\obj\Debug\veterinaria.csproj.CoreCompileInputs.cache
+C:\Users\elarv\OneDrive\Documentos\proy-fundamentos\borrador\obj\Debug\borrador.exe
+C:\Users\elarv\OneDrive\Documentos\proy-fundamentos\borrador\obj\Debug\borrador.pdb
+C:\Users\elarv\OneDrive\Documentos\proy-fundamentos\borrador\obj\Debug\borrador.frm_registro_citas.resources
