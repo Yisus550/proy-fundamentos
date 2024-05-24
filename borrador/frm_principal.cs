@@ -139,12 +139,12 @@ namespace borrador
 
         private void ActualizarHoraSalida(MySqlConnection conexion, string nombreUsuario)
         {
-            string consulta = "UPDATE registro_entrada_salidas SET hora_salida = @horaSalida WHERE usuario = @usuario";
+            string consulta = "UPDATE registro_entradas_salidas SET fecha_salida = @fecha_salida WHERE usuario = @usuario";
 
             using (MySqlCommand comando = new MySqlCommand(consulta, conexion))
             {
                 comando.Parameters.AddWithValue("@usuario", nombreUsuario);
-                comando.Parameters.AddWithValue("@horaSalida", DateTime.Now);
+                comando.Parameters.AddWithValue("@fecha_salida", DateTime.Now);
                 comando.ExecuteNonQuery();
                 Console.WriteLine("Hora de salida registrada para " + nombreUsuario);
               
