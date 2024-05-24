@@ -63,15 +63,57 @@ namespace borrador
                     command.Parameters.AddWithValue("@Cirujano", txt_cirujano.Text);
                     command.ExecuteNonQuery();
 
-                    command.ExecuteNonQuery();
+                
                     MessageBox.Show("Datos guardados correctamente.");
                     LimpiarParametros();
+                    Limpiar();
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show("Error al guardar los datos: " + ex.Message);
                 }
 
+            }
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
+                try
+            {
+                conn.Open();
+                string query = "INSERT INTO Registro_consultas (Nombre_Mascota, Fecha_consulta, Consultas_anteriores, Motivo, " +
+                        "Examen_fisico, Diagnostico, Pruebas_realizadas, Resultados, Medicamentos, Dosis, Como_Tomarlo," +
+                        " Dieta_recomendada, Cuidados_especiales, Especifique, Respuesta_tratamiento, Cambios_sintomas, " +
+                        "Recomendaciones) VALUES (@NombreMascota, @Fecha_consulta, @Consultas_anteriores, @Motivo, @Examen_fisico, @Diagnostico," +
+                        " @Pruebas_realizadas, @Resultados, @Medicamentos, @Dosis, @Como_Tomarlo, @Dieta_recomendada, @Cuidados_especiales, " +
+                        "@Especifique, @Respuesta_tratamiento, @Cambios_sintomas, @Recomendaciones)";
+                MySqlCommand command = new MySqlCommand(query, conn);
+                command.Parameters.AddWithValue("@nombreMascota", txtnombreM.Text);
+                command.Parameters.AddWithValue("@Fecha_consulta", fecha_consulta.Value);
+                command.Parameters.AddWithValue("@Consultas_anteriores", cbx_consultas.Text);
+                command.Parameters.AddWithValue("@Motivo", txt_motivoCon.Text);
+                command.Parameters.AddWithValue("@Examen_fisico",txt_examenFi.Text);
+                command.Parameters.AddWithValue("@Diagnostico", txt_Diagnostico.Text);
+                command.Parameters.AddWithValue("@Pruebas_realizadas", cbx_PruebasRealizadas.Text);
+                command.Parameters.AddWithValue("@Resultados", txt_ResultadosPuebas.Text);
+                command.Parameters.AddWithValue("@Medicamentos", txt_Medicamentos.Text);
+                command.Parameters.AddWithValue("@Dosis", txt_Dosis.Text);
+                command.Parameters.AddWithValue("@Como_Tomarlo", txt_Tomarlo.Text);
+                command.Parameters.AddWithValue("@Dieta_recomendada", txt_dietaRec.Text);
+                command.Parameters.AddWithValue("@Cuidados_especiales", rbt_CEsi.Checked ? true : false);
+                command.Parameters.AddWithValue("@Especifique", txt_EspecifiqueCE.Text);
+                command.Parameters.AddWithValue("@Respuesta_tratamiento", txt_respuestraTR.Text);
+                command.Parameters.AddWithValue("@Cambios_sintomas", txt_CambiosSin.Text);
+                command.Parameters.AddWithValue("@Recomendaciones", txt_NuevasRecom.Text);
+                command.ExecuteNonQuery();
+                MessageBox.Show("Registro guardado exitosamente.");
+                    Limpiar();
+                    LimpiarParametros();
+                }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+            finally
+            {
+                conn.Close();
             }
         }
 
@@ -94,6 +136,26 @@ namespace borrador
             fecha_cirugia.Value = DateTime.Now;
             txt_especifiqueCir.Clear();
            txt_cirujano.Clear();
+        }
+        private void Limpiar()
+        {
+            fecha_consulta.Value = DateTime.Now;
+            cbx_consultas.SelectedIndex = -1;
+            txt_motivoCon.Clear();
+            txt_examenFi.Clear();
+            txt_Diagnostico.Clear();
+            cbx_PruebasRealizadas.SelectedIndex = -1;
+            txt_ResultadosPuebas.Clear();
+            txt_Medicamentos.Clear();
+            txt_Dosis.Clear();
+            txt_Tomarlo.Clear();
+            txt_dietaRec.Clear();
+            rbt_CEsi.Checked = false;
+            rbt_CEno.Checked = false;
+            txt_EspecifiqueCE.Clear();
+            txt_respuestraTR.Clear();
+            txt_CambiosSin.Clear();
+            txt_NuevasRecom.Clear();
         }
 
         private void btn_buscar_Click(object sender, EventArgs e)
@@ -157,7 +219,49 @@ namespace borrador
             }
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string connectionString = "Server=localhost;Database=veterinaria;User ID=Jose;Password=perrito123;";
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
+                try
+            {
+                conn.Open();
+                string query = "UPDATE Registro_consultas SET Fecha_consulta=@Fecha_consulta, Consultas_anteriores=@Consultas_anteriores, Motivo=@Motivo, Examen_fisico=@Examen_fisico, Diagnostico=@Diagnostico, Pruebas_realizadas=@Pruebas_realizadas, Resultados=@Resultados, Medicamentos=@Medicamentos, Dosis=@Dosis, Como_Tomarlo=@Como_Tomarlo, Dieta_recomendada=@Dieta_recomendada, Cuidados_especiales=@Cuidados_especiales, Especifique=@Especifique, Respuesta_tratamiento=@Respuesta_tratamiento, Cambios_sintomas=@Cambios_sintomas, Recomendaciones=@Recomendaciones WHERE ID=@ID";
+                    MySqlCommand command = new MySqlCommand(query, conn);
+                    command.Parameters.AddWithValue("@Fecha_consulta", fecha_consulta.Value);
+                    command.Parameters.AddWithValue("@Consultas_anteriores", cbx_consultas.Text);
+                    command.Parameters.AddWithValue("@Motivo", txt_motivoCon.Text);
+                    command.Parameters.AddWithValue("@Examen_fisico", txt_examenFi.Text);
+                    command.Parameters.AddWithValue("@Diagnostico", txt_Diagnostico.Text);
+                    command.Parameters.AddWithValue("@Pruebas_realizadas", cbx_PruebasRealizadas.Text);
+                    command.Parameters.AddWithValue("@Resultados", txt_ResultadosPuebas.Text);
+                    command.Parameters.AddWithValue("@Medicamentos", txt_Medicamentos.Text);
+                    command.Parameters.AddWithValue("@Dosis", txt_Dosis.Text);
+                    command.Parameters.AddWithValue("@Como_Tomarlo", txt_Tomarlo.Text);
+                    command.Parameters.AddWithValue("@Dieta_recomendada", txt_dietaRec.Text);
+                    command.Parameters.AddWithValue("@Cuidados_especiales", rbt_CEsi.Checked ? true : false);
+                    command.Parameters.AddWithValue("@Especifique", txt_EspecifiqueCE.Text);
+                    command.Parameters.AddWithValue("@Respuesta_tratamiento", txt_respuestraTR.Text);
+                    command.Parameters.AddWithValue("@Cambios_sintomas", txt_CambiosSin.Text);
+                    command.Parameters.AddWithValue("@Recomendaciones", txt_NuevasRecom.Text);
+                    command.ExecuteNonQuery();
+                    MessageBox.Show("Registro actualizado exitosamente.");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
     } 
 
 
