@@ -47,7 +47,7 @@ namespace borrador
                 try
                 {
                     connection.Open();
-                    string query = "INSERT INTO citas (medico, nombre_mascota, especie, raza, propietario, telefono, fecha, hora, sintomas) VALUES (@medico, @nombre_mascota, @especie, @raza, @propietario, @telefono, @fecha, @hora, @sintomas)";
+                    string query = "INSERT INTO cita (medico, nombre_mascota, especie, raza, propietario, telefono, fecha, hora, sintomas) VALUES (@medico, @nombre_mascota, @especie, @raza, @propietario, @telefono, @fecha, @hora, @sintomas)";
 
                     using (MySqlCommand command = new MySqlCommand(query, connection))
                     {
